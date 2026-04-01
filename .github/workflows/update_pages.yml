@@ -32,6 +32,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Restore rolling temperature archive from gh-pages
+        run: |
+          git fetch origin gh-pages || true
+          mkdir -p docs/data
+          if git show origin/gh-pages:data/temp_archive.json >/tmp/temp_archive.json 2>/dev/null; then
+            cp /tmp/temp_archive.json docs/data/temp_archive.json
+          fi
+
       - name: Generate forecast JSON
         run: |
           python scripts/fetch_fluorescent_seas.py \

@@ -30,6 +30,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LOCATIONS = ROOT / "data" / "locations.json"
+TEMP_ARCHIVE_PATH = ROOT / "docs" / "data" / "temp_archive.json"
 
 USER_AGENT = "Milkyseas-V2/1.0 (+https://github.com/lzq1206/Milkyseas)"
 
@@ -157,7 +158,7 @@ def warming_trend_score(temp_history: List[Optional[float]]) -> float:
     return clamp01((slope + 3.0) / 6.0)
 
 
-def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str, Any]:
+def build_location_forecast(location: Dict[str, Any], days: int = 7, temp_history: Optional[List[float]] = None) -> Dict[str, Any]:
     lat = location["lat"]
     lon = location["lon"]
     region = location.get("group", "东海")
@@ -196,7 +197,7 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
 
     daily_rows = []
     prev_rain: Optional[float] = None
-    temp_history: List[Optional[float]] = []
+    history_values: List[Optional[float]] = list(temp_history or [])
 
     for day in days_all:
         w = weather_by_day.get(day, {})
@@ -211,12 +212,12 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
         current = stat(m.get("ocean_current_velocity", []), "mean")
         current_dir = stat(m.get("ocean_current_direction", []), "mean")
 
-        temp_history.append(temp)
+        history_values.append(temp)
 
         sst_score = 0.5 if sst is None else triangular(sst, low=preset["sst_peak"] - 8, peak=preset["sst_peak"], high=preset["sst_peak"] + 6)
         temp_score = 0.5 if temp is None else triangular(temp, low=preset["temp_peak"] - 10, peak=preset["temp_peak"], high=preset["temp_peak"] + 7)
-        warm_trend = warming_trend_score(temp_history)
-        warm_persist = warm_persistence_score(temp_history, threshold=preset["temp_peak"] - 1.5)
+        warm_trend = warming_trend_score(history_values)
+        warm_persist = warm_persistence_score(history_values, threshold=preset["temp_peak"] - 1.5)
         heat_build_score = clamp01(0.45 * temp_score + 0.30 * warm_trend + 0.25 * warm_persist)
         wind_score = 0.5 if wind is None else gaussian(wind, mu=preset["wind_peak"], sigma=2.7)
         onshore = onshore_score(wind_dir, preset["onshore_dir"])
@@ -308,6 +309,64 @@ def load_locations(path: Path) -> List[Dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_temp_archive(path: Path) -> Dict[str, List[Dict[str, Any]]]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    cities = payload.get("cities", {}) if isinstance(payload, dict) else {}
+    if not isinstance(cities, dict):
+        return {}
+    cleaned: Dict[str, List[Dict[str, Any]]] = {}
+    for city, rows in cities.items():
+        if not isinstance(rows, list):
+            continue
+        cleaned[city] = [row for row in rows if isinstance(row, dict) and row.get("date")]
+    return cleaned
+
+
+def trim_temp_archive(archive: Dict[str, List[Dict[str, Any]]], keep_days: int = 30) -> Dict[str, List[Dict[str, Any]]]:
+    cutoff = dt.date.today() - dt.timedelta(days=keep_days - 1)
+    out: Dict[str, List[Dict[str, Any]]] = {}
+    for city, rows in archive.items():
+        rows_sorted = sorted(rows, key=lambda r: r.get("date", ""))
+        filtered = [r for r in rows_sorted if r.get("date") and r["date"] >= cutoff.isoformat()]
+        if filtered:
+            out[city] = filtered[-keep_days:]
+    return out
+
+
+def append_temp_archive(
+    archive: Dict[str, List[Dict[str, Any]]],
+    locations: List[Dict[str, Any]],
+    results: List[Dict[str, Any]],
+    archive_date: str,
+) -> Dict[str, List[Dict[str, Any]]]:
+    indexed = {row["location"]["city"]: row for row in results}
+    for loc in locations:
+        city = loc["city"]
+        row = indexed.get(city)
+        if not row or not row.get("daily"):
+            continue
+        daily0 = row["daily"][0]
+        temp = daily0.get("features", {}).get("temperature_2m")
+        if temp is None:
+            continue
+        archive.setdefault(city, []).append(
+            {
+                "date": archive_date,
+                "city": city,
+                "province": loc.get("province"),
+                "group": loc.get("group"),
+                "temperature_2m": round(float(temp), 3),
+                "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
+            }
+        )
+    return trim_temp_archive(archive, keep_days=30)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Milkyseas V2: 多地点荧光海预测")
     parser.add_argument("--days", type=int, default=7, help="预测天数，默认7")
@@ -321,12 +380,21 @@ def main() -> None:
         raise SystemExit("--days 建议在 1~16 之间")
 
     locations = load_locations(Path(args.locations))
+    temp_archive = load_temp_archive(TEMP_ARCHIVE_PATH)
     run_at = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     run_date = dt.date.today().isoformat()
 
     results: List[Dict[str, Any]] = []
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
-        futures = {pool.submit(build_location_forecast, loc, args.days): loc for loc in locations}
+        futures = {
+            pool.submit(
+                build_location_forecast,
+                loc,
+                args.days,
+                [r.get("temperature_2m") for r in temp_archive.get(loc["city"], []) if r.get("temperature_2m") is not None][-30:],
+            ): loc
+            for loc in locations
+        }
         for future in as_completed(futures):
             loc = futures[future]
             try:
@@ -402,9 +470,29 @@ def main() -> None:
         "locations": results,
     }
 
+    temp_archive = append_temp_archive(temp_archive, locations, results, run_date)
+
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    TEMP_ARCHIVE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    TEMP_ARCHIVE_PATH.write_text(
+        json.dumps(
+            {
+                "meta": {
+                    "generated_at": run_at,
+                    "generated_date": run_date,
+                    "keep_days": 30,
+                    "note": "Rolling 30-day temperature archive used for warming trend calibration.",
+                },
+                "cities": temp_archive,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
 
     history_dir = Path(args.history_dir)
     history_dir.mkdir(parents=True, exist_ok=True)

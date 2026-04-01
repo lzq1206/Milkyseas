@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "generated_at": "2026-04-01T22:42:34+08:00",
+    "generated_date": "2026-04-01",
+    "keep_days": 30,
+    "note": "Rolling 30-day temperature archive used for warming trend calibration."
+  },
+  "cities": {
+    "大连市": [
+      {
+        "date": "2026-04-01",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.183,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "秦皇岛": [
+      {
+        "date": "2026-04-01",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.387,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "天津市": [
+      {
+        "date": "2026-04-01",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.025,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "东营市": [
+      {
+        "date": "2026-04-01",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.1,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "青岛市": [
+      {
+        "date": "2026-04-01",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.338,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "威海市": [
+      {
+        "date": "2026-04-01",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 9.067,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "舟山市": [
+      {
+        "date": "2026-04-01",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 13.896,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "台州市": [
+      {
+        "date": "2026-04-01",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.604,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "温州市": [
+      {
+        "date": "2026-04-01",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.446,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "宁波市": [
+      {
+        "date": "2026-04-01",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.988,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "平潭县": [
+      {
+        "date": "2026-04-01",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 16.704,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "宁德市": [
+      {
+        "date": "2026-04-01",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 16.521,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "厦门市": [
+      {
+        "date": "2026-04-01",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.308,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "泉州市": [
+      {
+        "date": "2026-04-01",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.471,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "深圳市": [
+      {
+        "date": "2026-04-01",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.958,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "珠海市": [
+      {
+        "date": "2026-04-01",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.038,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "惠州市": [
+      {
+        "date": "2026-04-01",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 22.604,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "汕头市": [
+      {
+        "date": "2026-04-01",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.692,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "陵水县": [
+      {
+        "date": "2026-04-01",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 25.817,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ],
+    "三亚市": [
+      {
+        "date": "2026-04-01",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.688,
+        "generated_at": "2026-04-01T22:42:46+08:00"
+      }
+    ]
+  }
+}
