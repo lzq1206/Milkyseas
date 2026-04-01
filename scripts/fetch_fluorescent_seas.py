@@ -220,6 +220,7 @@ def build_location_forecast(
     lon = location["lon"]
     region = location.get("group", "东海")
     preset = REGION_PRESETS.get(region, REGION_PRESETS["东海"])
+    geo_prior = float(location.get("geo_prior", 1.0))
 
     today = dt.date.today()
     start = today - dt.timedelta(days=PAST_DAYS)
@@ -295,8 +296,10 @@ def build_location_forecast(
             + 0.08 * current_score
         )
         raw_risk = clamp01(raw_risk + preset["bias"])
+        geo_prior_score = clamp01((geo_prior - 0.9) / 0.4)
+        prior_boost = clamp01(0.5 * geo_prior_score + 0.5 * (geo_prior - 1.0 + 0.5))
 
-        calibrated_score = clamp01(0.70 * raw_risk + 0.30 * visibility)
+        calibrated_score = clamp01(0.63 * raw_risk + 0.22 * visibility + 0.15 * prior_boost)
         probability = clamp01(score_to_probability(calibrated_score, threshold=0.58, scale=0.085))
         level = classify_level(probability)
         if day < today.isoformat():
@@ -357,7 +360,10 @@ def build_location_forecast(
 
     return {
         "location": location,
-        "region_preset": preset,
+                "region_preset": preset,
+        "geo_prior": round(geo_prior, 3),
+        "geo_prior_score": round(geo_prior_score, 3),
+        "prior_boost": round(prior_boost, 3),
         "summary": {
             "today_date": today.isoformat(),
             "today_probability": round(today_prob, 3),
@@ -520,6 +526,7 @@ def main() -> None:
                 "city": r["location"]["city"],
                 "province": r["location"]["province"],
                 "group": r["location"]["group"],
+                "geo_prior": r.get("geo_prior"),
                 "today_probability": r["summary"].get("today_probability"),
                 "today_level": r["summary"].get("today_level"),
                 "best_probability": r["summary"].get("best_probability"),

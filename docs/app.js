@@ -200,6 +200,7 @@ function renderSelected(row) {
     <div class="summary-line">今日等级：${scoreLabel(row.summary.today_level || '低概率')} · 最佳日期：${fmtDate(row.summary.best_date)} · 最佳概率：${fmtPct(row.summary.best_probability)}</div>
     <div class="summary-grid">
       <div class="summary-chip"><span>地区</span>${row.location.group}</div>
+      <div class="summary-chip"><span>天然权重</span>${fmtNum(row.geo_prior, 2)}</div>
       <div class="summary-chip"><span>今日日期</span>${fmtDate(todayDate)}</div>
       <div class="summary-chip"><span>今日气温</span>${fmtNum(todayRow?.features?.temperature_2m, 1)} °C</div>
       <div class="summary-chip"><span>今日海温</span>${fmtNum(todayRow?.features?.sea_surface_temperature, 1)} °C</div>
