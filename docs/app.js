@@ -1,6 +1,5 @@
 const latestUrl = 'data/latest.json';
 
-let rankingChart;
 let probabilityChart;
 let temperatureChart;
 let windChart;
@@ -63,52 +62,9 @@ function populateSelect(locations) {
   select.value = String(selectedIndex);
 }
 
-function buildRankingChart(labels, data) {
-  const ctx = document.getElementById('ranking-chart');
-  if (rankingChart) rankingChart.destroy();
-  rankingChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        label: '今日概率',
-        data,
-        borderWidth: 1,
-        backgroundColor: data.map((v) => colorForProbability(v) + 'cc'),
-      }],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => `概率：${(ctx.raw * 100).toFixed(1)}%`,
-          },
-        },
-      },
-      scales: {
-        x: {
-          ticks: { color: '#9db1cc' },
-          grid: { color: 'rgba(255,255,255,0.05)' },
-        },
-        y: {
-          beginAtZero: true,
-          max: 1,
-          ticks: {
-            color: '#9db1cc',
-            callback: (v) => `${Math.round(v * 100)}%`,
-          },
-          grid: { color: 'rgba(255,255,255,0.05)' },
-        },
-      },
-    },
-  });
-}
-
 function buildLineChart(canvasId, label, series, color, fillColor, yOpts = {}) {
   const ctx = document.getElementById(canvasId);
+  if (!ctx) return null;
   const labels = series.labels;
   const data = series.values;
   const datasets = [{
@@ -285,7 +241,6 @@ async function loadData() {
 
   const labels = locations.map((r) => r.location.city);
   const values = locations.map((r) => r.summary.today_probability ?? 0);
-  buildRankingChart(labels, values);
   populateSelect(locations);
   createMap(locations);
 
