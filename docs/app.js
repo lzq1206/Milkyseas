@@ -107,7 +107,7 @@ function buildLineChart(canvasId, label, series, color, fillColor, yOpts = {}) {
 function buildProbabilityChart(row) {
   const labels = row.daily.map((d) => d.date.slice(5));
   const values = row.daily.map((d) => d.scores.probability);
-  buildLineChart('probability-chart', `${row.location.city} 概率`, { labels, values }, 'rgba(76, 201, 240, 0.95)', 'rgba(76, 201, 240, 0.14)', {
+  buildLineChart('probability-chart', `${row.location.city} 概率（前后 7 天）`, { labels, values }, 'rgba(76, 201, 240, 0.95)', 'rgba(76, 201, 240, 0.14)', {
     beginAtZero: true,
     max: 1,
     ticks: { callback: (v) => `${Math.round(v * 100)}%` },
@@ -117,13 +117,13 @@ function buildProbabilityChart(row) {
 function buildTemperatureChart(row) {
   const labels = row.daily.map((d) => d.date.slice(5));
   const values = row.daily.map((d) => d.features.temperature_2m ?? null);
-  buildLineChart('temperature-chart', `${row.location.city} 气温`, { labels, values }, 'rgba(124, 92, 255, 0.95)', 'rgba(124, 92, 255, 0.14)');
+  buildLineChart('temperature-chart', `${row.location.city} 气温（前后 7 天）`, { labels, values }, 'rgba(124, 92, 255, 0.95)', 'rgba(124, 92, 255, 0.14)');
 }
 
 function buildWindChart(row) {
   const labels = row.daily.map((d) => d.date.slice(5));
   const values = row.daily.map((d) => d.features.wind_direction_10m ?? null);
-  buildLineChart('wind-chart', `${row.location.city} 风向`, { labels, values }, 'rgba(251, 191, 36, 0.95)', 'rgba(251, 191, 36, 0.14)', {
+  buildLineChart('wind-chart', `${row.location.city} 风向（前后 7 天）`, { labels, values }, 'rgba(251, 191, 36, 0.95)', 'rgba(251, 191, 36, 0.14)', {
     min: 0,
     max: 360,
     ticks: { callback: (v) => `${v}°` },
@@ -183,19 +183,21 @@ function refreshMap(locations) {
 }
 
 function renderSelected(row) {
+  const todayDate = row.summary.today_date;
+  const todayRow = row.daily.find((d) => d.date === todayDate) || row.daily[row.summary.today_index ?? 0] || row.daily[0];
   document.getElementById('selected-title').textContent = `${row.location.city} · ${row.location.province}`;
-  document.getElementById('selected-caption').textContent = `地区：${row.location.group}，今日概率 ${fmtPct(row.summary.today_probability)}，最佳日期 ${fmtDate(row.summary.best_date)}。`;
+  document.getElementById('selected-caption').textContent = `地区：${row.location.group}，时间窗为前后 7 天；今日概率 ${fmtPct(row.summary.today_probability)}，最佳日期 ${fmtDate(row.summary.best_date)}。`;
   document.getElementById('detail-summary').innerHTML = `
     <h3>${row.location.city}</h3>
     <div class="summary-value ${levelClass(row.summary.today_level || '低概率')}">${fmtPct(row.summary.today_probability)}</div>
     <div class="summary-line">今日等级：${scoreLabel(row.summary.today_level || '低概率')} · 最佳日期：${fmtDate(row.summary.best_date)} · 最佳概率：${fmtPct(row.summary.best_probability)}</div>
     <div class="summary-grid">
       <div class="summary-chip"><span>地区</span>${row.location.group}</div>
-      <div class="summary-chip"><span>海温均值</span>${fmtNum(row.daily?.[0]?.features?.sea_surface_temperature, 1)} °C</div>
-      <div class="summary-chip"><span>今日气温</span>${fmtNum(row.daily?.[0]?.features?.temperature_2m, 1)} °C</div>
-      <div class="summary-chip"><span>今日风速</span>${fmtNum(row.daily?.[0]?.features?.wind_speed_10m, 1)} m/s</div>
+      <div class="summary-chip"><span>今日日期</span>${fmtDate(todayDate)}</div>
+      <div class="summary-chip"><span>今日气温</span>${fmtNum(todayRow?.features?.temperature_2m, 1)} °C</div>
+      <div class="summary-chip"><span>今日风速</span>${fmtNum(todayRow?.features?.wind_speed_10m, 1)} m/s</div>
     </div>
-    <div class="summary-line">观察建议：${row.daily?.[0]?.observation || '—'}</div>
+    <div class="summary-line">观察建议：${todayRow?.observation || '—'} · 历史段用于升温背景，未来段用于高概率预测。</div>
   `;
   buildProbabilityChart(row);
   buildTemperatureChart(row);

@@ -43,7 +43,7 @@ jobs:
       - name: Generate forecast JSON
         run: |
           python scripts/fetch_fluorescent_seas.py \
-            --days 7 \
+            --days 15 \
             --output docs/data/latest.json \
             --history-dir docs/data/history \
             --workers 6

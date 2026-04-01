@@ -31,6 +31,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LOCATIONS = ROOT / "data" / "locations.json"
 TEMP_ARCHIVE_PATH = ROOT / "docs" / "data" / "temp_archive.json"
+PAST_DAYS = 7
+FUTURE_DAYS = 7
 
 USER_AGENT = "Milkyseas-V2/1.0 (+https://github.com/lzq1206/Milkyseas)"
 
@@ -87,6 +89,47 @@ def fetch_json(url: str, params: Dict[str, Any], retries: int = 2, timeout: int 
             else:
                 raise last_exc
     raise RuntimeError("unreachable")
+
+
+def date_range(start: dt.date, end: dt.date) -> List[dt.date]:
+    days = []
+    cur = start
+    while cur <= end:
+        days.append(cur)
+        cur += dt.timedelta(days=1)
+    return days
+
+
+def fetch_period_payload(endpoint: str, lat: float, lon: float, start_date: dt.date, end_date: dt.date, hourly: str) -> Dict[str, Any]:
+    params = {
+        "latitude": lat,
+        "longitude": lon,
+        "hourly": hourly,
+        "timezone": "Asia/Shanghai",
+        "start_date": start_date.isoformat(),
+        "end_date": end_date.isoformat(),
+    }
+    return fetch_json(endpoint, params)
+
+
+def fetch_weather_series(lat: float, lon: float, start_date: dt.date, end_date: dt.date) -> Dict[str, Any]:
+    endpoint = "https://api.open-meteo.com/v1/archive" if end_date < dt.date.today() else "https://api.open-meteo.com/v1/forecast"
+    return fetch_period_payload(endpoint, lat, lon, start_date, end_date, "temperature_2m,wind_speed_10m,wind_direction_10m,precipitation,cloud_cover")
+
+
+def fetch_marine_series(lat: float, lon: float, start_date: dt.date, end_date: dt.date) -> Dict[str, Any]:
+    archive_endpoint = "https://marine-api.open-meteo.com/v1/archive"
+    forecast_endpoint = "https://marine-api.open-meteo.com/v1/marine"
+    endpoint = archive_endpoint if end_date < dt.date.today() else forecast_endpoint
+    try:
+        return fetch_period_payload(endpoint, lat, lon, start_date, end_date, "sea_surface_temperature,ocean_current_velocity,ocean_current_direction")
+    except Exception:
+        if endpoint == archive_endpoint:
+            return {"hourly": {"time": []}}
+        try:
+            return fetch_period_payload(forecast_endpoint, lat, lon, start_date, end_date, "sea_surface_temperature,ocean_current_velocity,ocean_current_direction")
+        except Exception:
+            return {"hourly": {"time": []}}
 
 
 def aggregate_hourly_by_day(hourly: Dict[str, List[Any]]) -> Dict[str, Dict[str, List[float]]]:
@@ -158,38 +201,18 @@ def warming_trend_score(temp_history: List[Optional[float]]) -> float:
     return clamp01((slope + 3.0) / 6.0)
 
 
-def build_location_forecast(location: Dict[str, Any], days: int = 7, temp_history: Optional[List[float]] = None) -> Dict[str, Any]:
+def build_location_forecast(location: Dict[str, Any], days: int = 15, temp_history: Optional[List[float]] = None) -> Dict[str, Any]:
     lat = location["lat"]
     lon = location["lon"]
     region = location.get("group", "东海")
     preset = REGION_PRESETS.get(region, REGION_PRESETS["东海"])
 
     today = dt.date.today()
-    end = today + dt.timedelta(days=days - 1)
+    start = today - dt.timedelta(days=PAST_DAYS)
+    end = today + dt.timedelta(days=FUTURE_DAYS)
 
-    weather_params = {
-        "latitude": lat,
-        "longitude": lon,
-        "hourly": "temperature_2m,wind_speed_10m,wind_direction_10m,precipitation,cloud_cover",
-        "timezone": "Asia/Shanghai",
-        "start_date": today.isoformat(),
-        "end_date": end.isoformat(),
-    }
-    weather = fetch_json("https://api.open-meteo.com/v1/forecast", weather_params)
-
-    marine_params = {
-        "latitude": lat,
-        "longitude": lon,
-        "hourly": "sea_surface_temperature,ocean_current_velocity,ocean_current_direction",
-        "timezone": "Asia/Shanghai",
-        "start_date": today.isoformat(),
-        "end_date": end.isoformat(),
-    }
-    marine: Dict[str, Any]
-    try:
-        marine = fetch_json("https://marine-api.open-meteo.com/v1/marine", marine_params)
-    except Exception:
-        marine = {"hourly": {"time": []}}
+    weather = fetch_weather_series(lat, lon, start, end)
+    marine = fetch_marine_series(lat, lon, start, end)
 
     weather_by_day = aggregate_hourly_by_day(weather.get("hourly", {}))
     marine_by_day = aggregate_hourly_by_day(marine.get("hourly", {}))
@@ -198,6 +221,7 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7, temp_histor
     daily_rows = []
     prev_rain: Optional[float] = None
     history_values: List[Optional[float]] = list(temp_history or [])
+    today_row: Optional[Dict[str, Any]] = None
 
     for day in days_all:
         w = weather_by_day.get(day, {})
@@ -250,7 +274,12 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7, temp_histor
         calibrated_score = clamp01(0.70 * raw_risk + 0.30 * visibility)
         probability = clamp01(score_to_probability(calibrated_score, threshold=0.58, scale=0.085))
         level = classify_level(probability)
-        observation = "适合观察" if (visibility >= 0.55 and probability >= 0.48) else "一般"
+        if day < today.isoformat():
+            observation = "历史回看"
+        elif day == today.isoformat():
+            observation = "今日观测"
+        else:
+            observation = "适合观察" if (visibility >= 0.55 and probability >= 0.48) else "一般"
 
         daily_rows.append(
             {
@@ -283,23 +312,28 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7, temp_histor
                 },
                 "level": level,
                 "observation": observation,
+                "phase": "past" if day < today.isoformat() else ("today" if day == today.isoformat() else "future"),
             }
         )
+        if day == today.isoformat():
+            today_row = daily_rows[-1]
         prev_rain = rain
 
     best_day = max(daily_rows, key=lambda x: x["scores"]["probability"]) if daily_rows else None
     hottest = max((row["scores"]["probability"] for row in daily_rows), default=0.0)
-    today_prob = daily_rows[0]["scores"]["probability"] if daily_rows else 0.0
+    today_prob = today_row["scores"]["probability"] if today_row else (daily_rows[0]["scores"]["probability"] if daily_rows else 0.0)
 
     return {
         "location": location,
         "region_preset": preset,
         "summary": {
+            "today_date": today.isoformat(),
             "today_probability": round(today_prob, 3),
             "best_probability": round(hottest, 3),
             "best_date": best_day["date"] if best_day else None,
             "best_level": best_day["level"] if best_day else None,
-            "today_level": daily_rows[0]["level"] if daily_rows else None,
+            "today_level": today_row["level"] if today_row else (daily_rows[0]["level"] if daily_rows else None),
+            "today_index": (daily_rows.index(today_row) if today_row in daily_rows else None),
         },
         "daily": daily_rows,
     }
@@ -350,8 +384,9 @@ def append_temp_archive(
         row = indexed.get(city)
         if not row or not row.get("daily"):
             continue
-        daily0 = row["daily"][0]
-        temp = daily0.get("features", {}).get("temperature_2m")
+        today_date = row.get("summary", {}).get("today_date")
+        today_row = next((d for d in row["daily"] if d.get("date") == today_date), row["daily"][0])
+        temp = today_row.get("features", {}).get("temperature_2m")
         if temp is None:
             continue
         archive.setdefault(city, []).append(
@@ -369,7 +404,7 @@ def append_temp_archive(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Milkyseas V2: 多地点荧光海预测")
-    parser.add_argument("--days", type=int, default=7, help="预测天数，默认7")
+    parser.add_argument("--days", type=int, default=15, help="展示天数，默认15（前7天+后7天）")
     parser.add_argument("--locations", type=str, default=str(DEFAULT_LOCATIONS), help="地点JSON路径")
     parser.add_argument("--output", type=str, default=str(ROOT / "docs" / "data" / "latest.json"), help="输出JSON路径")
     parser.add_argument("--history-dir", type=str, default=str(ROOT / "docs" / "data" / "history"), help="历史快照目录")
