@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Milkyseas V2 · 多地点荧光海预测</title>
-  <meta name="description" content="Milkyseas V2：大连、秦皇岛、天津、东营、青岛、威海、舟山、台州、温州、宁波、平潭、宁德、厦门、泉州、深圳、珠海、惠州、汕头、陵水、三亚的日度荧光海预测与可视化。" />
+  <title>Milkyseas V2 · 多地点荧光海高概率预测</title>
+  <meta name="description" content="Milkyseas V2：大连、秦皇岛、天津、东营、青岛、威海、舟山、台州、温州、宁波、平潭、宁德、厦门、泉州、深圳、珠海、惠州、汕头、陵水、三亚的日度荧光海高概率预测与可视化。" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 </head>
@@ -12,8 +12,8 @@
   <header class="hero">
     <div class="hero__content">
       <p class="eyebrow">Milkyseas V2 · GitHub Pages Dashboard</p>
-      <h1>多地点荧光海预测</h1>
-      <p class="lead">每日自动抓取公开气象与海洋预报，输出 20 个中国沿海/近海城市的荧光海风险评分、最佳观测日与趋势图。</p>
+      <h1>多地点荧光海高概率预测</h1>
+      <p class="lead">每日自动抓取公开气象与海洋预报，输出 20 个中国沿海/近海城市的荧光海高概率、最佳观测日与趋势图。</p>
       <div class="hero__meta">
         <span id="meta-generated">加载中…</span>
         <span id="meta-model"></span>
@@ -22,7 +22,7 @@
     </div>
     <div class="hero__summary">
       <div class="summary-card accent">
-        <span class="summary-card__label">今日最高风险</span>
+        <span class="summary-card__label">今日最高概率</span>
         <strong id="today-top-city">—</strong>
         <span id="today-top-score">—</span>
       </div>
@@ -37,8 +37,8 @@
   <main class="container">
     <section class="stats-grid" id="stats-grid">
       <div class="stat-card"><span>城市数</span><strong id="stat-count">20</strong></div>
-      <div class="stat-card"><span>今日高风险</span><strong id="stat-high">—</strong></div>
-      <div class="stat-card"><span>今日中风险</span><strong id="stat-medium">—</strong></div>
+      <div class="stat-card"><span>今日高概率</span><strong id="stat-high">—</strong></div>
+      <div class="stat-card"><span>今日中概率</span><strong id="stat-medium">—</strong></div>
       <div class="stat-card"><span>当前数据日期</span><strong id="stat-date">—</strong></div>
     </section>
 
@@ -46,7 +46,7 @@
       <div class="panel__head">
         <div>
           <h2>城市风险总览</h2>
-          <p>按今日概率排序；卡片显示今日风险、最佳观测日与风险等级。</p>
+          <p>按今日概率排序；卡片显示今日概率、最佳观测日与概率等级。</p>
         </div>
         <div class="panel__actions">
           <label for="city-select">查看单城趋势</label>

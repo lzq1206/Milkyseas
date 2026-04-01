@@ -7,15 +7,15 @@ const fmtPct = (v) => (v == null || Number.isNaN(v) ? '—' : `${(v * 100).toFix
 const fmtDate = (v) => (v ? v : '—');
 
 function levelClass(level) {
-  if (level === '高') return 'high';
-  if (level === '中') return 'medium';
+  if (level === '高概率') return 'high';
+  if (level === '中概率') return 'medium';
   return 'low';
 }
 
 function scoreLabel(level) {
-  if (level === '高') return '高风险';
-  if (level === '中') return '中风险';
-  return '低风险';
+  if (level === '高概率') return '高概率';
+  if (level === '中概率') return '中概率';
+  return '低概率';
 }
 
 function makeCard(row) {
@@ -169,7 +169,7 @@ async function loadData() {
   }
   if (bestObserve) {
     document.getElementById('today-top-observe').textContent = bestObserve.location.city;
-    document.getElementById('today-top-observe-score').textContent = `${fmtPct(bestObserve.summary.today_probability)} · ${scoreLabel(bestObserve.summary.today_level)}`;
+  document.getElementById('today-top-observe-score').textContent = `${fmtPct(bestObserve.summary.today_probability)} · ${scoreLabel(bestObserve.summary.today_level)}`;
   }
 
   const cardsGrid = document.getElementById('cards-grid');

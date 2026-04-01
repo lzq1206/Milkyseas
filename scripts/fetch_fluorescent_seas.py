@@ -3,13 +3,13 @@
 
 功能：
 - 抓取 Open-Meteo 公开天气与海洋预报
-- 对 20 个中国沿海/近海城市生成日度荧光海风险评分
+- 对 20 个中国沿海/近海城市生成日度荧光海概率评分
 - 输出静态站点可直接消费的 latest.json 与 history 快照
 - 为后续历史标签校准预留参数结构
 
 说明：
 - 这是启发式可校准模板，不是“已训练好的真值模型”。
-- 评分表示“夜间观察到荧光海的综合机会”，结合温度、风场、降雨、海温与海流。
+- 评分表示“夜间观察到荧光海的综合概率倾向”，结合连续升温、持续高温、风向朝岸、降雨、海温与海流。
 - 若海洋接口缺字段，脚本自动降级，仅保留天气特征。
 """
 
@@ -126,10 +126,35 @@ def onshore_score(direction_deg: Optional[float], preferred: float) -> float:
 
 def classify_level(prob: float) -> str:
     if prob >= 0.72:
-        return "高"
+        return "高概率"
     if prob >= 0.48:
-        return "中"
-    return "低"
+        return "中概率"
+    return "低概率"
+
+
+def mean_safe(vals: Iterable[Optional[float]]) -> Optional[float]:
+    clean = [v for v in vals if v is not None]
+    if not clean:
+        return None
+    return float(statistics.mean(clean))
+
+
+def warm_persistence_score(temp_history: List[Optional[float]], threshold: float) -> float:
+    """连续多日维持高温的加分：最近四天里，越多天高于阈值越好。"""
+    recent = [t for t in temp_history[-4:] if t is not None]
+    if not recent:
+        return 0.5
+    hits = sum(1 for t in recent if t >= threshold)
+    return clamp01(hits / 4.0)
+
+
+def warming_trend_score(temp_history: List[Optional[float]]) -> float:
+    """连续升温加分：对最近三天做简化斜率。"""
+    recent = [t for t in temp_history[-3:] if t is not None]
+    if len(recent) < 2:
+        return 0.5
+    slope = recent[-1] - recent[0]
+    return clamp01((slope + 3.0) / 6.0)
 
 
 def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str, Any]:
@@ -171,6 +196,7 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
 
     daily_rows = []
     prev_rain: Optional[float] = None
+    temp_history: List[Optional[float]] = []
 
     for day in days_all:
         w = weather_by_day.get(day, {})
@@ -185,10 +211,16 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
         current = stat(m.get("ocean_current_velocity", []), "mean")
         current_dir = stat(m.get("ocean_current_direction", []), "mean")
 
+        temp_history.append(temp)
+
         sst_score = 0.5 if sst is None else triangular(sst, low=preset["sst_peak"] - 8, peak=preset["sst_peak"], high=preset["sst_peak"] + 6)
         temp_score = 0.5 if temp is None else triangular(temp, low=preset["temp_peak"] - 10, peak=preset["temp_peak"], high=preset["temp_peak"] + 7)
+        warm_trend = warming_trend_score(temp_history)
+        warm_persist = warm_persistence_score(temp_history, threshold=preset["temp_peak"] - 1.5)
+        heat_build_score = clamp01(0.45 * temp_score + 0.30 * warm_trend + 0.25 * warm_persist)
         wind_score = 0.5 if wind is None else gaussian(wind, mu=preset["wind_peak"], sigma=2.7)
         onshore = onshore_score(wind_dir, preset["onshore_dir"])
+        shore_transport_score = clamp01(onshore * (0.45 + 0.55 * wind_score))
 
         if rain is None:
             rain_score = 0.5
@@ -205,12 +237,12 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
         visibility = clamp01(0.58 * cloud_vis + 0.42 * wind_vis)
 
         raw_risk = (
-            0.30 * sst_score
-            + 0.17 * temp_score
-            + 0.17 * wind_score
-            + 0.14 * onshore
-            + 0.11 * rain_score
-            + 0.11 * current_score
+            0.38 * heat_build_score
+            + 0.18 * shore_transport_score
+            + 0.15 * sst_score
+            + 0.12 * wind_score
+            + 0.09 * rain_score
+            + 0.08 * current_score
         )
         raw_risk = clamp01(raw_risk + preset["bias"])
 
@@ -235,8 +267,12 @@ def build_location_forecast(location: Dict[str, Any], days: int = 7) -> Dict[str
                 "scores": {
                     "sst_score": round(sst_score, 3),
                     "temp_score": round(temp_score, 3),
+                    "warming_trend_score": round(warm_trend, 3),
+                    "warm_persistence_score": round(warm_persist, 3),
+                    "heat_build_score": round(heat_build_score, 3),
                     "wind_score": round(wind_score, 3),
                     "onshore_score": round(onshore, 3),
+                    "shore_transport_score": round(shore_transport_score, 3),
                     "rain_score": round(rain_score, 3),
                     "current_score": round(current_score, 3),
                     "raw_risk": round(raw_risk, 3),
@@ -301,16 +337,16 @@ def main() -> None:
                         "location": loc,
                         "region_preset": REGION_PRESETS.get(loc.get("group", "东海"), REGION_PRESETS["东海"]),
                         "summary": {
-                            "today_probability": None,
-                            "best_probability": None,
-                            "best_date": None,
-                            "best_level": "低",
-                            "today_level": "低",
-                            "error": str(exc),
-                        },
-                        "daily": [],
-                    }
-                )
+                        "today_probability": None,
+                        "best_probability": None,
+                        "best_date": None,
+                        "best_level": "低概率",
+                        "today_level": "低概率",
+                        "error": str(exc),
+                    },
+                    "daily": [],
+                }
+            )
 
     results.sort(key=lambda x: (x["summary"].get("today_probability") or -1), reverse=True)
 
