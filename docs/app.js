@@ -2,6 +2,7 @@ const latestUrl = 'data/latest.json';
 
 let probabilityChart;
 let temperatureChart;
+let seaTemperatureChart;
 let windChart;
 let map;
 let mapMarkers = [];
@@ -120,6 +121,12 @@ function buildTemperatureChart(row) {
   buildLineChart('temperature-chart', `${row.location.city} 气温（前后 7 天）`, { labels, values }, 'rgba(124, 92, 255, 0.95)', 'rgba(124, 92, 255, 0.14)');
 }
 
+function buildSeaTemperatureChart(row) {
+  const labels = row.daily.map((d) => d.date.slice(5));
+  const values = row.daily.map((d) => d.features.sea_surface_temperature ?? null);
+  buildLineChart('sea-temperature-chart', `${row.location.city} 海温（前后 7 天）`, { labels, values }, 'rgba(52, 211, 153, 0.95)', 'rgba(52, 211, 153, 0.14)');
+}
+
 function buildWindChart(row) {
   const labels = row.daily.map((d) => d.date.slice(5));
   const values = row.daily.map((d) => d.features.wind_direction_10m ?? null);
@@ -195,12 +202,14 @@ function renderSelected(row) {
       <div class="summary-chip"><span>地区</span>${row.location.group}</div>
       <div class="summary-chip"><span>今日日期</span>${fmtDate(todayDate)}</div>
       <div class="summary-chip"><span>今日气温</span>${fmtNum(todayRow?.features?.temperature_2m, 1)} °C</div>
+      <div class="summary-chip"><span>今日海温</span>${fmtNum(todayRow?.features?.sea_surface_temperature, 1)} °C</div>
       <div class="summary-chip"><span>今日风速</span>${fmtNum(todayRow?.features?.wind_speed_10m, 1)} m/s</div>
     </div>
     <div class="summary-line">观察建议：${todayRow?.observation || '—'} · 历史段用于升温背景，未来段用于高概率预测。</div>
   `;
   buildProbabilityChart(row);
   buildTemperatureChart(row);
+  buildSeaTemperatureChart(row);
   buildWindChart(row);
 }
 

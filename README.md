@@ -31,7 +31,7 @@ python -m http.server -d docs 8000
 - Pages 输出目录：`docs/`
 - 数据快照：`docs/data/latest.json`
 - 历史快照：`docs/data/history/`
-- 温度滚动档案：`docs/data/temp_archive.json`（保留近 30 天，用于连续升温/持续高温校准）
+- 温度滚动档案：`docs/data/temp_archive.json`（保留近 30 天，用于连续升温/持续高温校准，包含空气温度与海水温度）
 
 ## 模型口径
 

@@ -201,7 +201,21 @@ def warming_trend_score(temp_history: List[Optional[float]]) -> float:
     return clamp01((slope + 3.0) / 6.0)
 
 
-def build_location_forecast(location: Dict[str, Any], days: int = 15, temp_history: Optional[List[float]] = None) -> Dict[str, Any]:
+def short_term_rise_score(temp_history: List[Optional[float]], window: int = 4, target_jump: float = 10.0) -> float:
+    """短时间内升温加分：最近窗口内当前值相对历史最低值的抬升幅度。"""
+    recent = [t for t in temp_history[-window:] if t is not None]
+    if len(recent) < 2:
+        return 0.5
+    rise = recent[-1] - min(recent[:-1])
+    return clamp01(rise / max(target_jump, 1e-6))
+
+
+def build_location_forecast(
+    location: Dict[str, Any],
+    days: int = 15,
+    air_history: Optional[List[float]] = None,
+    sea_history: Optional[List[float]] = None,
+) -> Dict[str, Any]:
     lat = location["lat"]
     lon = location["lon"]
     region = location.get("group", "东海")
@@ -220,7 +234,8 @@ def build_location_forecast(location: Dict[str, Any], days: int = 15, temp_histo
 
     daily_rows = []
     prev_rain: Optional[float] = None
-    history_values: List[Optional[float]] = list(temp_history or [])
+    air_history_values: List[Optional[float]] = list(air_history or [])
+    sea_history_values: List[Optional[float]] = list(sea_history or [])
     today_row: Optional[Dict[str, Any]] = None
 
     for day in days_all:
@@ -236,13 +251,23 @@ def build_location_forecast(location: Dict[str, Any], days: int = 15, temp_histo
         current = stat(m.get("ocean_current_velocity", []), "mean")
         current_dir = stat(m.get("ocean_current_direction", []), "mean")
 
-        history_values.append(temp)
+        air_history_values.append(temp)
+        sea_history_values.append(sst)
 
         sst_score = 0.5 if sst is None else triangular(sst, low=preset["sst_peak"] - 8, peak=preset["sst_peak"], high=preset["sst_peak"] + 6)
         temp_score = 0.5 if temp is None else triangular(temp, low=preset["temp_peak"] - 10, peak=preset["temp_peak"], high=preset["temp_peak"] + 7)
-        warm_trend = warming_trend_score(history_values)
-        warm_persist = warm_persistence_score(history_values, threshold=preset["temp_peak"] - 1.5)
-        heat_build_score = clamp01(0.45 * temp_score + 0.30 * warm_trend + 0.25 * warm_persist)
+        air_warm_trend = warming_trend_score(air_history_values)
+        air_warm_persist = warm_persistence_score(air_history_values, threshold=preset["temp_peak"] - 1.5)
+        air_short_rise = short_term_rise_score(air_history_values, window=4, target_jump=10.0)
+        air_heat_build_score = clamp01(0.28 * temp_score + 0.22 * air_warm_trend + 0.20 * air_warm_persist + 0.30 * air_short_rise)
+
+        sea_temp_score = 0.5 if sst is None else triangular(sst, low=preset["sst_peak"] - 7, peak=preset["sst_peak"], high=preset["sst_peak"] + 5)
+        sea_warm_trend = warming_trend_score(sea_history_values)
+        sea_warm_persist = warm_persistence_score(sea_history_values, threshold=preset["sst_peak"] - 1.2)
+        sea_short_rise = short_term_rise_score(sea_history_values, window=4, target_jump=10.0)
+        sea_heat_build_score = clamp01(0.28 * sea_temp_score + 0.22 * sea_warm_trend + 0.20 * sea_warm_persist + 0.30 * sea_short_rise)
+
+        heat_build_score = clamp01(0.45 * sea_heat_build_score + 0.35 * air_heat_build_score + 0.20 * temp_score)
         wind_score = 0.5 if wind is None else gaussian(wind, mu=preset["wind_peak"], sigma=2.7)
         onshore = onshore_score(wind_dir, preset["onshore_dir"])
         shore_transport_score = clamp01(onshore * (0.45 + 0.55 * wind_score))
@@ -297,8 +322,15 @@ def build_location_forecast(location: Dict[str, Any], days: int = 15, temp_histo
                 "scores": {
                     "sst_score": round(sst_score, 3),
                     "temp_score": round(temp_score, 3),
-                    "warming_trend_score": round(warm_trend, 3),
-                    "warm_persistence_score": round(warm_persist, 3),
+                    "air_warming_trend_score": round(air_warm_trend, 3),
+                    "air_warm_persistence_score": round(air_warm_persist, 3),
+                    "air_short_rise_score": round(air_short_rise, 3),
+                    "air_heat_build_score": round(air_heat_build_score, 3),
+                    "sea_temperature_score": round(sea_temp_score, 3),
+                    "sea_warming_trend_score": round(sea_warm_trend, 3),
+                    "sea_warm_persistence_score": round(sea_warm_persist, 3),
+                    "sea_short_rise_score": round(sea_short_rise, 3),
+                    "sea_heat_build_score": round(sea_heat_build_score, 3),
                     "heat_build_score": round(heat_build_score, 3),
                     "wind_score": round(wind_score, 3),
                     "onshore_score": round(onshore, 3),
@@ -357,15 +389,25 @@ def load_temp_archive(path: Path) -> Dict[str, List[Dict[str, Any]]]:
     for city, rows in cities.items():
         if not isinstance(rows, list):
             continue
-        cleaned[city] = [row for row in rows if isinstance(row, dict) and row.get("date")]
+        cleaned[city] = dedupe_archive_rows([row for row in rows if isinstance(row, dict) and row.get("date")])
     return cleaned
+
+
+def dedupe_archive_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    deduped: Dict[str, Dict[str, Any]] = {}
+    for row in sorted(rows, key=lambda r: (r.get("date", ""), r.get("generated_at", ""))):
+        date_key = row.get("date")
+        if not date_key:
+            continue
+        deduped[date_key] = row
+    return list(deduped.values())
 
 
 def trim_temp_archive(archive: Dict[str, List[Dict[str, Any]]], keep_days: int = 30) -> Dict[str, List[Dict[str, Any]]]:
     cutoff = dt.date.today() - dt.timedelta(days=keep_days - 1)
     out: Dict[str, List[Dict[str, Any]]] = {}
     for city, rows in archive.items():
-        rows_sorted = sorted(rows, key=lambda r: r.get("date", ""))
+        rows_sorted = dedupe_archive_rows(rows)
         filtered = [r for r in rows_sorted if r.get("date") and r["date"] >= cutoff.isoformat()]
         if filtered:
             out[city] = filtered[-keep_days:]
@@ -387,18 +429,20 @@ def append_temp_archive(
         today_date = row.get("summary", {}).get("today_date")
         today_row = next((d for d in row["daily"] if d.get("date") == today_date), row["daily"][0])
         temp = today_row.get("features", {}).get("temperature_2m")
-        if temp is None:
+        sea_temp = today_row.get("features", {}).get("sea_surface_temperature")
+        if temp is None and sea_temp is None:
             continue
-        archive.setdefault(city, []).append(
-            {
-                "date": archive_date,
-                "city": city,
-                "province": loc.get("province"),
-                "group": loc.get("group"),
-                "temperature_2m": round(float(temp), 3),
-                "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
-            }
-        )
+        archive[city] = [r for r in archive.get(city, []) if r.get("date") != archive_date]
+        entry = {
+            "date": archive_date,
+            "city": city,
+            "province": loc.get("province"),
+            "group": loc.get("group"),
+            "temperature_2m": round(float(temp), 3),
+            "sea_surface_temperature": round(float(sea_temp), 3) if sea_temp is not None else None,
+            "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
+        }
+        archive.setdefault(city, []).append(entry)
     return trim_temp_archive(archive, keep_days=30)
 
 
@@ -427,6 +471,7 @@ def main() -> None:
                 loc,
                 args.days,
                 [r.get("temperature_2m") for r in temp_archive.get(loc["city"], []) if r.get("temperature_2m") is not None][-30:],
+                [r.get("sea_surface_temperature") for r in temp_archive.get(loc["city"], []) if r.get("sea_surface_temperature") is not None][-30:],
             ): loc
             for loc in locations
         }
