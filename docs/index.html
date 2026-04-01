@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milkyseas V2 · 多地点荧光海预测</title>
+  <meta name="description" content="Milkyseas V2：大连、秦皇岛、天津、东营、青岛、威海、舟山、台州、温州、宁波、平潭、宁德、厦门、泉州、深圳、珠海、惠州、汕头、陵水、三亚的日度荧光海预测与可视化。" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Milkyseas V2 · GitHub Pages Dashboard</p>
+      <h1>多地点荧光海预测</h1>
+      <p class="lead">每日自动抓取公开气象与海洋预报，输出 20 个中国沿海/近海城市的荧光海风险评分、最佳观测日与趋势图。</p>
+      <div class="hero__meta">
+        <span id="meta-generated">加载中…</span>
+        <span id="meta-model"></span>
+        <span id="meta-source"></span>
+      </div>
+    </div>
+    <div class="hero__summary">
+      <div class="summary-card accent">
+        <span class="summary-card__label">今日最高风险</span>
+        <strong id="today-top-city">—</strong>
+        <span id="today-top-score">—</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">今日最值得观察</span>
+        <strong id="today-top-observe">—</strong>
+        <span id="today-top-observe-score">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" id="stats-grid">
+      <div class="stat-card"><span>城市数</span><strong id="stat-count">20</strong></div>
+      <div class="stat-card"><span>今日高风险</span><strong id="stat-high">—</strong></div>
+      <div class="stat-card"><span>今日中风险</span><strong id="stat-medium">—</strong></div>
+      <div class="stat-card"><span>当前数据日期</span><strong id="stat-date">—</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>城市风险总览</h2>
+          <p>按今日概率排序；卡片显示今日风险、最佳观测日与风险等级。</p>
+        </div>
+        <div class="panel__actions">
+          <label for="city-select">查看单城趋势</label>
+          <select id="city-select"></select>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="ranking-chart" height="120"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2 id="selected-title">单城趋势</h2>
+          <p id="selected-caption">选择城市后查看未来几天的概率变化。</p>
+        </div>
+      </div>
+      <div class="chart-wrap chart-wrap--large">
+        <canvas id="trend-chart" height="130"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>今日城市列表</h2>
+          <p>展示每个地点的今日概率、最佳日期与观察建议。</p>
+        </div>
+      </div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>预测明细</h2>
+          <p>适合导出、复核与二次分析的结构化表格。</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>城市</th>
+              <th>地区</th>
+              <th>今日概率</th>
+              <th>今日等级</th>
+              <th>最佳日期</th>
+              <th>最佳概率</th>
+              <th>最佳等级</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>数据来源：Open-Meteo 公开天气/海洋预报。此页为启发式可校准模板，不构成安全或出行保证。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

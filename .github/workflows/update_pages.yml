@@ -1,0 +1,58 @@
+name: Update Milkyseas Pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 0 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'data/**'
+      - 'docs/**'
+      - '.github/workflows/update_pages.yml'
+      - 'requirements.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: milkyseas-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate forecast JSON
+        run: |
+          python scripts/fetch_fluorescent_seas.py \
+            --days 7 \
+            --output docs/data/latest.json \
+            --history-dir docs/data/history \
+            --workers 6
+
+      - name: Ensure Pages files exist
+        run: |
+          touch docs/.nojekyll
+          python - <<'PY'
+          from pathlib import Path
+          Path('docs/data').mkdir(parents=True, exist_ok=True)
+          Path('docs/data/history').mkdir(parents=True, exist_ok=True)
+          PY
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./docs
+          force_orphan: true

@@ -1,0 +1,4587 @@
+{
+  "meta": {
+    "model": "milkyseas_v2_calibrated_template",
+    "version": "v2.0.0",
+    "generated_at": "2026-04-01T22:10:10+08:00",
+    "generated_date": "2026-04-01",
+    "days": 7,
+    "source": {
+      "weather": "Open-Meteo forecast API",
+      "marine": "Open-Meteo marine API"
+    },
+    "note": "启发式可校准模板；后续可接入历史荧光海标签做参数再训练。"
+  },
+  "ranking_today": [
+    {
+      "city": "三亚市",
+      "province": "海南",
+      "group": "南海",
+      "today_probability": 0.779,
+      "today_level": "高",
+      "best_probability": 0.797,
+      "best_date": "2026-04-04",
+      "best_level": "高"
+    },
+    {
+      "city": "陵水县",
+      "province": "海南",
+      "group": "南海",
+      "today_probability": 0.766,
+      "today_level": "高",
+      "best_probability": 0.766,
+      "best_date": "2026-04-01",
+      "best_level": "高"
+    },
+    {
+      "city": "厦门市",
+      "province": "福建",
+      "group": "台湾海峡",
+      "today_probability": 0.429,
+      "today_level": "低",
+      "best_probability": 0.481,
+      "best_date": "2026-04-07",
+      "best_level": "中"
+    },
+    {
+      "city": "深圳市",
+      "province": "广东",
+      "group": "南海北部",
+      "today_probability": 0.32,
+      "today_level": "低",
+      "best_probability": 0.606,
+      "best_date": "2026-04-04",
+      "best_level": "中"
+    },
+    {
+      "city": "台州市",
+      "province": "浙江",
+      "group": "东海",
+      "today_probability": 0.209,
+      "today_level": "低",
+      "best_probability": 0.421,
+      "best_date": "2026-04-05",
+      "best_level": "低"
+    },
+    {
+      "city": "汕头市",
+      "province": "广东",
+      "group": "南海北部",
+      "today_probability": 0.195,
+      "today_level": "低",
+      "best_probability": 0.338,
+      "best_date": "2026-04-04",
+      "best_level": "低"
+    },
+    {
+      "city": "东营市",
+      "province": "山东",
+      "group": "渤海/黄海北部",
+      "today_probability": 0.189,
+      "today_level": "低",
+      "best_probability": 0.23,
+      "best_date": "2026-04-04",
+      "best_level": "低"
+    },
+    {
+      "city": "宁德市",
+      "province": "福建",
+      "group": "东海/台湾海峡",
+      "today_probability": 0.189,
+      "today_level": "低",
+      "best_probability": 0.529,
+      "best_date": "2026-04-05",
+      "best_level": "中"
+    },
+    {
+      "city": "温州市",
+      "province": "浙江",
+      "group": "东海",
+      "today_probability": 0.183,
+      "today_level": "低",
+      "best_probability": 0.399,
+      "best_date": "2026-04-05",
+      "best_level": "低"
+    },
+    {
+      "city": "惠州市",
+      "province": "广东",
+      "group": "南海北部",
+      "today_probability": 0.161,
+      "today_level": "低",
+      "best_probability": 0.687,
+      "best_date": "2026-04-07",
+      "best_level": "中"
+    },
+    {
+      "city": "天津市",
+      "province": "天津",
+      "group": "渤海/黄海北部",
+      "today_probability": 0.145,
+      "today_level": "低",
+      "best_probability": 0.497,
+      "best_date": "2026-04-02",
+      "best_level": "中"
+    },
+    {
+      "city": "威海市",
+      "province": "山东",
+      "group": "黄海",
+      "today_probability": 0.131,
+      "today_level": "低",
+      "best_probability": 0.131,
+      "best_date": "2026-04-01",
+      "best_level": "低"
+    },
+    {
+      "city": "泉州市",
+      "province": "福建",
+      "group": "台湾海峡",
+      "today_probability": 0.125,
+      "today_level": "低",
+      "best_probability": 0.305,
+      "best_date": "2026-04-05",
+      "best_level": "低"
+    },
+    {
+      "city": "宁波市",
+      "province": "浙江",
+      "group": "东海",
+      "today_probability": 0.111,
+      "today_level": "低",
+      "best_probability": 0.259,
+      "best_date": "2026-04-05",
+      "best_level": "低"
+    },
+    {
+      "city": "珠海市",
+      "province": "广东",
+      "group": "南海北部",
+      "today_probability": 0.099,
+      "today_level": "低",
+      "best_probability": 0.626,
+      "best_date": "2026-04-04",
+      "best_level": "中"
+    },
+    {
+      "city": "青岛市",
+      "province": "山东",
+      "group": "黄海",
+      "today_probability": 0.061,
+      "today_level": "低",
+      "best_probability": 0.061,
+      "best_date": "2026-04-01",
+      "best_level": "低"
+    },
+    {
+      "city": "秦皇岛",
+      "province": "河北",
+      "group": "渤海/黄海北部",
+      "today_probability": 0.049,
+      "today_level": "低",
+      "best_probability": 0.132,
+      "best_date": "2026-04-02",
+      "best_level": "低"
+    },
+    {
+      "city": "舟山市",
+      "province": "浙江",
+      "group": "东海",
+      "today_probability": 0.032,
+      "today_level": "低",
+      "best_probability": 0.088,
+      "best_date": "2026-04-02",
+      "best_level": "低"
+    },
+    {
+      "city": "大连市",
+      "province": "辽宁",
+      "group": "渤海/黄海北部",
+      "today_probability": 0.023,
+      "today_level": "低",
+      "best_probability": 0.1,
+      "best_date": "2026-04-02",
+      "best_level": "低"
+    },
+    {
+      "city": "平潭县",
+      "province": "福建",
+      "group": "台湾海峡",
+      "today_probability": 0.008,
+      "today_level": "低",
+      "best_probability": 0.471,
+      "best_date": "2026-04-05",
+      "best_level": "低"
+    }
+  ],
+  "top_today": [
+    {
+      "city": "三亚市",
+      "province": "海南",
+      "today_probability": 0.779,
+      "today_level": "高"
+    },
+    {
+      "city": "陵水县",
+      "province": "海南",
+      "today_probability": 0.766,
+      "today_level": "高"
+    },
+    {
+      "city": "厦门市",
+      "province": "福建",
+      "today_probability": 0.429,
+      "today_level": "低"
+    },
+    {
+      "city": "深圳市",
+      "province": "广东",
+      "today_probability": 0.32,
+      "today_level": "低"
+    },
+    {
+      "city": "台州市",
+      "province": "浙江",
+      "today_probability": 0.209,
+      "today_level": "低"
+    }
+  ],
+  "top_best": [
+    {
+      "city": "三亚市",
+      "province": "海南",
+      "best_probability": 0.797,
+      "best_date": "2026-04-04",
+      "best_level": "高"
+    },
+    {
+      "city": "陵水县",
+      "province": "海南",
+      "best_probability": 0.766,
+      "best_date": "2026-04-01",
+      "best_level": "高"
+    },
+    {
+      "city": "惠州市",
+      "province": "广东",
+      "best_probability": 0.687,
+      "best_date": "2026-04-07",
+      "best_level": "中"
+    },
+    {
+      "city": "珠海市",
+      "province": "广东",
+      "best_probability": 0.626,
+      "best_date": "2026-04-04",
+      "best_level": "中"
+    },
+    {
+      "city": "深圳市",
+      "province": "广东",
+      "best_probability": 0.606,
+      "best_date": "2026-04-04",
+      "best_level": "中"
+    }
+  ],
+  "locations": [
+    {
+      "location": {
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "lat": 18.252,
+        "lon": 109.511,
+        "notes": "三亚近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.5,
+        "sst_peak": 26.5,
+        "wind_peak": 4.8,
+        "onshore_dir": 130.0,
+        "bias": 0.07
+      },
+      "summary": {
+        "today_probability": 0.779,
+        "best_probability": 0.797,
+        "best_date": "2026-04-04",
+        "best_level": "高",
+        "today_level": "高"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 27.6875,
+            "wind_speed_10m": 7.708333333333333,
+            "wind_direction_10m": 100.79166666666667,
+            "precipitation": 0.0,
+            "cloud_cover": 47.833333333333336,
+            "sea_surface_temperature": 26.754166666666666,
+            "ocean_current_velocity": 0.7916666666666666,
+            "ocean_current_direction": 167.04166666666666
+          },
+          "scores": {
+            "sst_score": 0.958,
+            "temp_score": 0.919,
+            "wind_score": 0.56,
+            "onshore_score": 0.868,
+            "rain_score": 0.8,
+            "current_score": 0.011,
+            "raw_risk": 0.819,
+            "visibility": 0.378,
+            "calibrated_score": 0.687,
+            "probability": 0.779
+          },
+          "level": "高",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 27.53333333333333,
+            "wind_speed_10m": 10.108333333333333,
+            "wind_direction_10m": 113.83333333333333,
+            "precipitation": 0.0,
+            "cloud_cover": 54.75,
+            "sea_surface_temperature": 26.829166666666666,
+            "ocean_current_velocity": 0.6,
+            "ocean_current_direction": 113.79166666666667
+          },
+          "scores": {
+            "sst_score": 0.945,
+            "temp_score": 0.903,
+            "wind_score": 0.145,
+            "onshore_score": 0.958,
+            "rain_score": 0.8,
+            "current_score": 0.151,
+            "raw_risk": 0.77,
+            "visibility": 0.266,
+            "calibrated_score": 0.619,
+            "probability": 0.613
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 27.408333333333335,
+            "wind_speed_10m": 10.495833333333334,
+            "wind_direction_10m": 133.125,
+            "precipitation": 0.2,
+            "cloud_cover": 74.125,
+            "sea_surface_temperature": 26.820833333333333,
+            "ocean_current_velocity": 0.475,
+            "ocean_current_direction": 91.79166666666667
+          },
+          "scores": {
+            "sst_score": 0.947,
+            "temp_score": 0.891,
+            "wind_score": 0.108,
+            "onshore_score": 0.998,
+            "rain_score": 0.789,
+            "current_score": 0.458,
+            "raw_risk": 0.801,
+            "visibility": 0.152,
+            "calibrated_score": 0.606,
+            "probability": 0.576
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 27.85,
+            "wind_speed_10m": 7.245833333333334,
+            "wind_direction_10m": 110.375,
+            "precipitation": 0.0,
+            "cloud_cover": 69.33333333333333,
+            "sea_surface_temperature": 26.979166666666668,
+            "ocean_current_velocity": 0.5291666666666667,
+            "ocean_current_direction": 131.58333333333334
+          },
+          "scores": {
+            "sst_score": 0.92,
+            "temp_score": 0.935,
+            "wind_score": 0.663,
+            "onshore_score": 0.938,
+            "rain_score": 0.8,
+            "current_score": 0.3,
+            "raw_risk": 0.87,
+            "visibility": 0.29,
+            "calibrated_score": 0.696,
+            "probability": 0.797
+          },
+          "level": "高",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 28.15,
+            "wind_speed_10m": 7.629166666666666,
+            "wind_direction_10m": 115.70833333333333,
+            "precipitation": 0.0,
+            "cloud_cover": 61.666666666666664,
+            "sea_surface_temperature": 27.170833333333334,
+            "ocean_current_velocity": 0.7291666666666666,
+            "ocean_current_direction": 107.58333333333333
+          },
+          "scores": {
+            "sst_score": 0.888,
+            "temp_score": 0.965,
+            "wind_score": 0.578,
+            "onshore_score": 0.967,
+            "rain_score": 0.8,
+            "current_score": 0.029,
+            "raw_risk": 0.825,
+            "visibility": 0.303,
+            "calibrated_score": 0.669,
+            "probability": 0.739
+          },
+          "level": "高",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 28.53333333333333,
+            "wind_speed_10m": 7.991666666666667,
+            "wind_direction_10m": 115.91666666666667,
+            "precipitation": 0.0,
+            "cloud_cover": 54.208333333333336,
+            "sea_surface_temperature": 27.429166666666667,
+            "ocean_current_velocity": 0.7791666666666667,
+            "ocean_current_direction": 138.0
+          },
+          "scores": {
+            "sst_score": 0.845,
+            "temp_score": 0.995,
+            "wind_score": 0.497,
+            "onshore_score": 0.968,
+            "rain_score": 0.8,
+            "current_score": 0.013,
+            "raw_risk": 0.802,
+            "visibility": 0.323,
+            "calibrated_score": 0.658,
+            "probability": 0.716
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 28.6375,
+            "wind_speed_10m": 7.695833333333333,
+            "wind_direction_10m": 109.0,
+            "precipitation": 0.0,
+            "cloud_cover": 46.708333333333336,
+            "sea_surface_temperature": 27.59583333333333,
+            "ocean_current_velocity": 0.8625,
+            "ocean_current_direction": 149.83333333333334
+          },
+          "scores": {
+            "sst_score": 0.817,
+            "temp_score": 0.98,
+            "wind_score": 0.563,
+            "onshore_score": 0.93,
+            "rain_score": 0.8,
+            "current_score": 0.003,
+            "raw_risk": 0.796,
+            "visibility": 0.385,
+            "calibrated_score": 0.673,
+            "probability": 0.749
+          },
+          "level": "高",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "lat": 18.506,
+        "lon": 110.036,
+        "notes": "陵水近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.5,
+        "sst_peak": 26.5,
+        "wind_peak": 4.8,
+        "onshore_dir": 130.0,
+        "bias": 0.07
+      },
+      "summary": {
+        "today_probability": 0.766,
+        "best_probability": 0.766,
+        "best_date": "2026-04-01",
+        "best_level": "高",
+        "today_level": "高"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 25.816666666666666,
+            "wind_speed_10m": 6.591666666666667,
+            "wind_direction_10m": 238.79166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 44.875,
+            "sea_surface_temperature": 26.879166666666666,
+            "ocean_current_velocity": 0.5125000000000001,
+            "ocean_current_direction": 46.5
+          },
+          "scores": {
+            "sst_score": 0.937,
+            "temp_score": 0.732,
+            "wind_score": 0.802,
+            "onshore_score": 0.141,
+            "rain_score": 0.8,
+            "current_score": 0.345,
+            "raw_risk": 0.758,
+            "visibility": 0.501,
+            "calibrated_score": 0.681,
+            "probability": 0.766
+          },
+          "level": "高",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 26.045833333333334,
+            "wind_speed_10m": 7.004166666666666,
+            "wind_direction_10m": 243.54166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 59.458333333333336,
+            "sea_surface_temperature": 26.9,
+            "ocean_current_velocity": 0.7958333333333334,
+            "ocean_current_direction": 32.958333333333336
+          },
+          "scores": {
+            "sst_score": 0.933,
+            "temp_score": 0.755,
+            "wind_score": 0.717,
+            "onshore_score": 0.119,
+            "rain_score": 0.8,
+            "current_score": 0.01,
+            "raw_risk": 0.706,
+            "visibility": 0.371,
+            "calibrated_score": 0.605,
+            "probability": 0.574
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 26.154166666666665,
+            "wind_speed_10m": 7.391666666666667,
+            "wind_direction_10m": 249.625,
+            "precipitation": 0.0,
+            "cloud_cover": 70.125,
+            "sea_surface_temperature": 26.858333333333334,
+            "ocean_current_velocity": 0.8166666666666667,
+            "ocean_current_direction": 39.166666666666664
+          },
+          "scores": {
+            "sst_score": 0.94,
+            "temp_score": 0.765,
+            "wind_score": 0.631,
+            "onshore_score": 0.094,
+            "rain_score": 0.8,
+            "current_score": 0.007,
+            "raw_risk": 0.691,
+            "visibility": 0.273,
+            "calibrated_score": 0.566,
+            "probability": 0.459
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 26.483333333333334,
+            "wind_speed_10m": 6.6875,
+            "wind_direction_10m": 241.125,
+            "precipitation": 0.0,
+            "cloud_cover": 76.25,
+            "sea_surface_temperature": 26.870833333333334,
+            "ocean_current_velocity": 0.6625,
+            "ocean_current_direction": 48.5
+          },
+          "scores": {
+            "sst_score": 0.938,
+            "temp_score": 0.798,
+            "wind_score": 0.783,
+            "onshore_score": 0.13,
+            "rain_score": 0.8,
+            "current_score": 0.072,
+            "raw_risk": 0.734,
+            "visibility": 0.308,
+            "calibrated_score": 0.607,
+            "probability": 0.577
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 27.0875,
+            "wind_speed_10m": 6.833333333333333,
+            "wind_direction_10m": 230.08333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 74.875,
+            "sea_surface_temperature": 27.029166666666665,
+            "ocean_current_velocity": 0.7583333333333333,
+            "ocean_current_direction": 40.833333333333336
+          },
+          "scores": {
+            "sst_score": 0.912,
+            "temp_score": 0.859,
+            "wind_score": 0.753,
+            "onshore_score": 0.191,
+            "rain_score": 0.8,
+            "current_score": 0.019,
+            "raw_risk": 0.734,
+            "visibility": 0.3,
+            "calibrated_score": 0.604,
+            "probability": 0.57
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 27.479166666666668,
+            "wind_speed_10m": 7.229166666666667,
+            "wind_direction_10m": 233.0,
+            "precipitation": 0.0,
+            "cloud_cover": 68.875,
+            "sea_surface_temperature": 27.108333333333334,
+            "ocean_current_velocity": 0.7833333333333333,
+            "ocean_current_direction": 45.083333333333336
+          },
+          "scores": {
+            "sst_score": 0.899,
+            "temp_score": 0.898,
+            "wind_score": 0.667,
+            "onshore_score": 0.173,
+            "rain_score": 0.8,
+            "current_score": 0.012,
+            "raw_risk": 0.719,
+            "visibility": 0.295,
+            "calibrated_score": 0.592,
+            "probability": 0.535
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 27.441666666666666,
+            "wind_speed_10m": 6.779166666666667,
+            "wind_direction_10m": 219.70833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 52.791666666666664,
+            "sea_surface_temperature": 27.225,
+            "ocean_current_velocity": 0.7708333333333334,
+            "ocean_current_direction": 43.291666666666664
+          },
+          "scores": {
+            "sst_score": 0.879,
+            "temp_score": 0.894,
+            "wind_score": 0.764,
+            "onshore_score": 0.264,
+            "rain_score": 0.8,
+            "current_score": 0.015,
+            "raw_risk": 0.742,
+            "visibility": 0.434,
+            "calibrated_score": 0.65,
+            "probability": 0.694
+          },
+          "level": "中",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 24.479,
+        "lon": 118.089,
+        "notes": "厦门近岸"
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.429,
+        "best_probability": 0.481,
+        "best_date": "2026-04-07",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 22.308333333333334,
+            "wind_speed_10m": 7.558333333333334,
+            "wind_direction_10m": 152.54166666666666,
+            "precipitation": 0.3,
+            "cloud_cover": 61.166666666666664,
+            "sea_surface_temperature": 20.3,
+            "ocean_current_velocity": 0.37916666666666665,
+            "ocean_current_direction": 181.875
+          },
+          "scores": {
+            "sst_score": 0.35,
+            "temp_score": 0.531,
+            "wind_score": 0.683,
+            "onshore_score": 0.839,
+            "rain_score": 0.784,
+            "current_score": 0.773,
+            "raw_risk": 0.66,
+            "visibility": 0.312,
+            "calibrated_score": 0.556,
+            "probability": 0.429
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 19.9,
+            "wind_speed_10m": 8.795833333333333,
+            "wind_direction_10m": 71.16666666666667,
+            "precipitation": 2.3000000000000003,
+            "cloud_cover": 84.5,
+            "sea_surface_temperature": 20.275,
+            "ocean_current_velocity": 0.42916666666666664,
+            "ocean_current_direction": 255.75
+          },
+          "scores": {
+            "sst_score": 0.347,
+            "temp_score": 0.29,
+            "wind_score": 0.412,
+            "onshore_score": 0.674,
+            "rain_score": 0.677,
+            "current_score": 0.609,
+            "raw_risk": 0.519,
+            "visibility": 0.114,
+            "calibrated_score": 0.398,
+            "probability": 0.105
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 20.058333333333334,
+            "wind_speed_10m": 2.6125,
+            "wind_direction_10m": 261.0416666666667,
+            "precipitation": 16.900000000000002,
+            "cloud_cover": 99.16666666666667,
+            "sea_surface_temperature": 20.316666666666666,
+            "ocean_current_velocity": 0.38333333333333336,
+            "ocean_current_direction": 126.04166666666667
+          },
+          "scores": {
+            "sst_score": 0.352,
+            "temp_score": 0.306,
+            "wind_score": 0.632,
+            "onshore_score": 0.037,
+            "rain_score": 0.154,
+            "current_score": 0.76,
+            "raw_risk": 0.431,
+            "visibility": 0.335,
+            "calibrated_score": 0.402,
+            "probability": 0.11
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 22.195833333333333,
+            "wind_speed_10m": 5.629166666666666,
+            "wind_direction_10m": 186.79166666666666,
+            "precipitation": 18.699999999999996,
+            "cloud_cover": 97.5,
+            "sea_surface_temperature": 20.78333333333333,
+            "ocean_current_velocity": 0.3416666666666667,
+            "ocean_current_direction": 150.375
+          },
+          "scores": {
+            "sst_score": 0.41,
+            "temp_score": 0.52,
+            "wind_score": 0.987,
+            "onshore_score": 0.478,
+            "rain_score": 0.0,
+            "current_score": 0.878,
+            "raw_risk": 0.603,
+            "visibility": 0.316,
+            "calibrated_score": 0.517,
+            "probability": 0.322
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 21.725,
+            "wind_speed_10m": 2.8666666666666667,
+            "wind_direction_10m": 142.5,
+            "precipitation": 7.199999999999999,
+            "cloud_cover": 97.54166666666667,
+            "sea_surface_temperature": 20.775,
+            "ocean_current_velocity": 0.31666666666666665,
+            "ocean_current_direction": 170.625
+          },
+          "scores": {
+            "sst_score": 0.409,
+            "temp_score": 0.473,
+            "wind_score": 0.688,
+            "onshore_score": 0.92,
+            "rain_score": 0.416,
+            "current_score": 0.934,
+            "raw_risk": 0.657,
+            "visibility": 0.372,
+            "calibrated_score": 0.572,
+            "probability": 0.476
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 22.9875,
+            "wind_speed_10m": 7.670833333333333,
+            "wind_direction_10m": 171.54166666666666,
+            "precipitation": 28.800000000000015,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 20.84583333333333,
+            "ocean_current_velocity": 0.3041666666666667,
+            "ocean_current_direction": 72.375
+          },
+          "scores": {
+            "sst_score": 0.418,
+            "temp_score": 0.599,
+            "wind_score": 0.658,
+            "onshore_score": 0.645,
+            "rain_score": 0.108,
+            "current_score": 0.956,
+            "raw_risk": 0.606,
+            "visibility": 0.078,
+            "calibrated_score": 0.448,
+            "probability": 0.174
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 25.329166666666666,
+            "wind_speed_10m": 6.3125,
+            "wind_direction_10m": 151.66666666666666,
+            "precipitation": 16.8,
+            "cloud_cover": 97.0,
+            "sea_surface_temperature": 21.1625,
+            "ocean_current_velocity": 0.3,
+            "ocean_current_direction": 201.375
+          },
+          "scores": {
+            "sst_score": 0.458,
+            "temp_score": 0.833,
+            "wind_score": 0.919,
+            "onshore_score": 0.847,
+            "rain_score": 0.0,
+            "current_score": 0.962,
+            "raw_risk": 0.72,
+            "visibility": 0.233,
+            "calibrated_score": 0.573,
+            "probability": 0.481
+          },
+          "level": "中",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 22.543,
+        "lon": 114.058,
+        "notes": "深圳近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.32,
+        "best_probability": 0.606,
+        "best_date": "2026-04-04",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 23.958333333333332,
+            "wind_speed_10m": 8.6625,
+            "wind_direction_10m": 189.41666666666666,
+            "precipitation": 2.2,
+            "cloud_cover": 76.25,
+            "sea_surface_temperature": 25.900000000000002,
+            "ocean_current_velocity": 0.7666666666666667,
+            "ocean_current_direction": 267.2916666666667
+          },
+          "scores": {
+            "sst_score": 0.988,
+            "temp_score": 0.596,
+            "wind_score": 0.359,
+            "onshore_score": 0.504,
+            "rain_score": 0.683,
+            "current_score": 0.016,
+            "raw_risk": 0.666,
+            "visibility": 0.165,
+            "calibrated_score": 0.516,
+            "probability": 0.32
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 23.645833333333332,
+            "wind_speed_10m": 10.620833333333334,
+            "wind_direction_10m": 115.83333333333333,
+            "precipitation": 6.799999999999999,
+            "cloud_cover": 89.375,
+            "sea_surface_temperature": 25.9625,
+            "ocean_current_velocity": 0.7125,
+            "ocean_current_direction": 251.375
+          },
+          "scores": {
+            "sst_score": 0.995,
+            "temp_score": 0.565,
+            "wind_score": 0.098,
+            "onshore_score": 0.986,
+            "rain_score": 0.583,
+            "current_score": 0.037,
+            "raw_risk": 0.677,
+            "visibility": 0.063,
+            "calibrated_score": 0.493,
+            "probability": 0.265
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 24.570833333333333,
+            "wind_speed_10m": 11.645833333333334,
+            "wind_direction_10m": 171.5,
+            "precipitation": 5.6,
+            "cloud_cover": 90.5,
+            "sea_surface_temperature": 25.9875,
+            "ocean_current_velocity": 0.7416666666666667,
+            "ocean_current_direction": 95.08333333333333
+          },
+          "scores": {
+            "sst_score": 0.998,
+            "temp_score": 0.657,
+            "wind_score": 0.04,
+            "onshore_score": 0.699,
+            "rain_score": 0.633,
+            "current_score": 0.024,
+            "raw_risk": 0.648,
+            "visibility": 0.055,
+            "calibrated_score": 0.47,
+            "probability": 0.216
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 23.883333333333333,
+            "wind_speed_10m": 4.775,
+            "wind_direction_10m": 203.16666666666666,
+            "precipitation": 22.0,
+            "cloud_cover": 95.08333333333333,
+            "sea_surface_temperature": 26.054166666666667,
+            "ocean_current_velocity": 0.8041666666666667,
+            "ocean_current_direction": 248.33333333333334
+          },
+          "scores": {
+            "sst_score": 0.991,
+            "temp_score": 0.588,
+            "wind_score": 1.0,
+            "onshore_score": 0.364,
+            "rain_score": 0.204,
+            "current_score": 0.009,
+            "raw_risk": 0.702,
+            "visibility": 0.418,
+            "calibrated_score": 0.617,
+            "probability": 0.606
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 24.395833333333332,
+            "wind_speed_10m": 9.454166666666667,
+            "wind_direction_10m": 135.29166666666666,
+            "precipitation": 15.300000000000002,
+            "cloud_cover": 93.5,
+            "sea_surface_temperature": 26.041666666666668,
+            "ocean_current_velocity": 0.6958333333333333,
+            "ocean_current_direction": 158.04166666666666
+          },
+          "scores": {
+            "sst_score": 0.993,
+            "temp_score": 0.64,
+            "wind_score": 0.226,
+            "onshore_score": 0.983,
+            "rain_score": 0.0,
+            "current_score": 0.047,
+            "raw_risk": 0.648,
+            "visibility": 0.048,
+            "calibrated_score": 0.468,
+            "probability": 0.211
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 25.666666666666668,
+            "wind_speed_10m": 14.625,
+            "wind_direction_10m": 175.125,
+            "precipitation": 0.0,
+            "cloud_cover": 96.83333333333333,
+            "sea_surface_temperature": 26.1625,
+            "ocean_current_velocity": 0.7083333333333334,
+            "ocean_current_direction": 89.125
+          },
+          "scores": {
+            "sst_score": 0.973,
+            "temp_score": 0.767,
+            "wind_score": 0.001,
+            "onshore_score": 0.66,
+            "rain_score": 0.8,
+            "current_score": 0.039,
+            "raw_risk": 0.667,
+            "visibility": 0.018,
+            "calibrated_score": 0.473,
+            "probability": 0.22
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 26.241666666666667,
+            "wind_speed_10m": 10.9125,
+            "wind_direction_10m": 174.125,
+            "precipitation": 0.0,
+            "cloud_cover": 79.04166666666667,
+            "sea_surface_temperature": 26.454166666666666,
+            "ocean_current_velocity": 0.5833333333333334,
+            "ocean_current_direction": 79.75
+          },
+          "scores": {
+            "sst_score": 0.924,
+            "temp_score": 0.824,
+            "wind_score": 0.077,
+            "onshore_score": 0.671,
+            "rain_score": 0.8,
+            "current_score": 0.18,
+            "raw_risk": 0.692,
+            "visibility": 0.123,
+            "calibrated_score": 0.521,
+            "probability": 0.334
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 28.656,
+        "lon": 121.42,
+        "notes": "台州沿海"
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": 0.209,
+        "best_probability": 0.421,
+        "best_date": "2026-04-05",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 14.604166666666666,
+            "wind_speed_10m": 3.9,
+            "wind_direction_10m": 186.625,
+            "precipitation": 2.5,
+            "cloud_cover": 76.875,
+            "sea_surface_temperature": 15.55,
+            "ocean_current_velocity": 0.32083333333333336,
+            "ocean_current_direction": 183.75
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.891,
+            "onshore_score": 0.379,
+            "rain_score": 0.667,
+            "current_score": 0.925,
+            "raw_risk": 0.43,
+            "visibility": 0.554,
+            "calibrated_score": 0.467,
+            "probability": 0.209
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 15.108333333333333,
+            "wind_speed_10m": 5.470833333333333,
+            "wind_direction_10m": 179.20833333333334,
+            "precipitation": 0.3,
+            "cloud_cover": 88.79166666666667,
+            "sea_surface_temperature": 15.766666666666666,
+            "ocean_current_velocity": 0.32916666666666666,
+            "ocean_current_direction": 33.75
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.995,
+            "onshore_score": 0.453,
+            "rain_score": 0.955,
+            "current_score": 0.908,
+            "raw_risk": 0.488,
+            "visibility": 0.385,
+            "calibrated_score": 0.457,
+            "probability": 0.19
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 14.441666666666666,
+            "wind_speed_10m": 2.908333333333333,
+            "wind_direction_10m": 208.33333333333334,
+            "precipitation": 23.0,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 15.9,
+            "ocean_current_velocity": 0.5125,
+            "ocean_current_direction": 17.625
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.698,
+            "onshore_score": 0.202,
+            "rain_score": 0.0,
+            "current_score": 0.345,
+            "raw_risk": 0.235,
+            "visibility": 0.362,
+            "calibrated_score": 0.273,
+            "probability": 0.026
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 18.7625,
+            "wind_speed_10m": 6.783333333333333,
+            "wind_direction_10m": 249.125,
+            "precipitation": 0.0,
+            "cloud_cover": 81.33333333333333,
+            "sea_surface_temperature": 16.4375,
+            "ocean_current_velocity": 0.29583333333333334,
+            "ocean_current_direction": 125.25
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.276,
+            "wind_score": 0.842,
+            "onshore_score": 0.041,
+            "rain_score": 0.8,
+            "current_score": 0.968,
+            "raw_risk": 0.44,
+            "visibility": 0.268,
+            "calibrated_score": 0.389,
+            "probability": 0.095
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 18.770833333333332,
+            "wind_speed_10m": 5.208333333333333,
+            "wind_direction_10m": 143.91666666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 70.75,
+            "sea_surface_temperature": 16.833333333333332,
+            "ocean_current_velocity": 0.38333333333333336,
+            "ocean_current_direction": 96.375
+          },
+          "scores": {
+            "sst_score": 0.042,
+            "temp_score": 0.277,
+            "wind_score": 1.0,
+            "onshore_score": 0.827,
+            "rain_score": 0.8,
+            "current_score": 0.76,
+            "raw_risk": 0.567,
+            "visibility": 0.52,
+            "calibrated_score": 0.553,
+            "probability": 0.421
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 18.55,
+            "wind_speed_10m": 1.8416666666666668,
+            "wind_direction_10m": 139.08333333333334,
+            "precipitation": 17.100000000000005,
+            "cloud_cover": 99.16666666666667,
+            "sea_surface_temperature": 17.608333333333334,
+            "ocean_current_velocity": 0.3375,
+            "ocean_current_direction": 97.33333333333333
+          },
+          "scores": {
+            "sst_score": 0.139,
+            "temp_score": 0.255,
+            "wind_score": 0.461,
+            "onshore_score": 0.87,
+            "rain_score": 0.0,
+            "current_score": 0.889,
+            "raw_risk": 0.433,
+            "visibility": 0.239,
+            "calibrated_score": 0.375,
+            "probability": 0.082
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 20.3625,
+            "wind_speed_10m": 5.541666666666667,
+            "wind_direction_10m": 189.25,
+            "precipitation": 2.6999999999999993,
+            "cloud_cover": 92.79166666666667,
+            "sea_surface_temperature": 17.7,
+            "ocean_current_velocity": 0.6666666666666666,
+            "ocean_current_direction": 188.33333333333334
+          },
+          "scores": {
+            "sst_score": 0.15,
+            "temp_score": 0.436,
+            "wind_score": 0.992,
+            "onshore_score": 0.354,
+            "rain_score": 0.656,
+            "current_score": 0.069,
+            "raw_risk": 0.467,
+            "visibility": 0.354,
+            "calibrated_score": 0.433,
+            "probability": 0.151
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 23.354,
+        "lon": 116.681,
+        "notes": "汕头近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.195,
+        "best_probability": 0.338,
+        "best_date": "2026-04-04",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 23.691666666666666,
+            "wind_speed_10m": 10.804166666666667,
+            "wind_direction_10m": 233.54166666666666,
+            "precipitation": 0.9,
+            "cloud_cover": 56.541666666666664,
+            "sea_surface_temperature": 22.445833333333333,
+            "ocean_current_velocity": 0.2875,
+            "ocean_current_direction": 44.625
+          },
+          "scores": {
+            "sst_score": 0.556,
+            "temp_score": 0.569,
+            "wind_score": 0.084,
+            "onshore_score": 0.143,
+            "rain_score": 0.752,
+            "current_score": 0.979,
+            "raw_risk": 0.548,
+            "visibility": 0.253,
+            "calibrated_score": 0.46,
+            "probability": 0.195
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 20.370833333333334,
+            "wind_speed_10m": 10.895833333333334,
+            "wind_direction_10m": 86.33333333333333,
+            "precipitation": 1.7999999999999998,
+            "cloud_cover": 80.29166666666667,
+            "sea_surface_temperature": 22.42083333333333,
+            "ocean_current_velocity": 0.26666666666666666,
+            "ocean_current_direction": 199.5
+          },
+          "scores": {
+            "sst_score": 0.553,
+            "temp_score": 0.237,
+            "wind_score": 0.078,
+            "onshore_score": 0.781,
+            "rain_score": 0.738,
+            "current_score": 0.996,
+            "raw_risk": 0.579,
+            "visibility": 0.115,
+            "calibrated_score": 0.44,
+            "probability": 0.162
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 23.179166666666667,
+            "wind_speed_10m": 8.491666666666667,
+            "wind_direction_10m": 138.58333333333334,
+            "precipitation": 2.3,
+            "cloud_cover": 95.41666666666667,
+            "sea_surface_temperature": 22.558333333333334,
+            "ocean_current_velocity": 0.4083333333333333,
+            "ocean_current_direction": 38.916666666666664
+          },
+          "scores": {
+            "sst_score": 0.57,
+            "temp_score": 0.518,
+            "wind_score": 0.393,
+            "onshore_score": 0.97,
+            "rain_score": 0.789,
+            "current_score": 0.679,
+            "raw_risk": 0.683,
+            "visibility": 0.06,
+            "calibrated_score": 0.496,
+            "probability": 0.272
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 24.179166666666667,
+            "wind_speed_10m": 4.079166666666667,
+            "wind_direction_10m": 234.75,
+            "precipitation": 13.0,
+            "cloud_cover": 97.79166666666667,
+            "sea_surface_temperature": 22.825,
+            "ocean_current_velocity": 0.7208333333333333,
+            "ocean_current_direction": 42.125
+          },
+          "scores": {
+            "sst_score": 0.603,
+            "temp_score": 0.618,
+            "wind_score": 0.965,
+            "onshore_score": 0.137,
+            "rain_score": 0.261,
+            "current_score": 0.033,
+            "raw_risk": 0.561,
+            "visibility": 0.432,
+            "calibrated_score": 0.523,
+            "probability": 0.338
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 22.358333333333334,
+            "wind_speed_10m": 7.441666666666666,
+            "wind_direction_10m": 92.58333333333333,
+            "precipitation": 11.699999999999998,
+            "cloud_cover": 97.83333333333333,
+            "sea_surface_temperature": 22.954166666666666,
+            "ocean_current_velocity": 0.4583333333333333,
+            "ocean_current_direction": 35.333333333333336
+          },
+          "scores": {
+            "sst_score": 0.619,
+            "temp_score": 0.436,
+            "wind_score": 0.62,
+            "onshore_score": 0.841,
+            "rain_score": 0.176,
+            "current_score": 0.512,
+            "raw_risk": 0.619,
+            "visibility": 0.108,
+            "calibrated_score": 0.465,
+            "probability": 0.206
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 24.8125,
+            "wind_speed_10m": 11.854166666666666,
+            "wind_direction_10m": 154.08333333333334,
+            "precipitation": 6.6,
+            "cloud_cover": 98.75,
+            "sea_surface_temperature": 23.141666666666666,
+            "ocean_current_velocity": 0.625,
+            "ocean_current_direction": 35.375
+          },
+          "scores": {
+            "sst_score": 0.643,
+            "temp_score": 0.681,
+            "wind_score": 0.033,
+            "onshore_score": 0.87,
+            "rain_score": 0.448,
+            "current_score": 0.114,
+            "raw_risk": 0.558,
+            "visibility": 0.007,
+            "calibrated_score": 0.393,
+            "probability": 0.099
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 26.3375,
+            "wind_speed_10m": 8.683333333333334,
+            "wind_direction_10m": 196.95833333333334,
+            "precipitation": 3.5999999999999996,
+            "cloud_cover": 97.0,
+            "sea_surface_temperature": 23.4625,
+            "ocean_current_velocity": 0.5916666666666667,
+            "ocean_current_direction": 34.916666666666664
+          },
+          "scores": {
+            "sst_score": 0.683,
+            "temp_score": 0.834,
+            "wind_score": 0.355,
+            "onshore_score": 0.425,
+            "rain_score": 0.752,
+            "current_score": 0.165,
+            "raw_risk": 0.627,
+            "visibility": 0.044,
+            "calibrated_score": 0.453,
+            "probability": 0.182
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "lat": 37.434,
+        "lon": 118.674,
+        "notes": "黄河三角洲近岸"
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": 0.189,
+        "best_probability": 0.23,
+        "best_date": "2026-04-04",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 10.1,
+            "wind_speed_10m": 12.145833333333334,
+            "wind_direction_10m": 93.45833333333333,
+            "precipitation": 0.0,
+            "cloud_cover": 26.083333333333332,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.03,
+            "onshore_score": 0.998,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.468,
+            "visibility": 0.429,
+            "calibrated_score": 0.456,
+            "probability": 0.189
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 15.004166666666666,
+            "wind_speed_10m": 8.141666666666667,
+            "wind_direction_10m": 154.83333333333334,
+            "precipitation": 1.3,
+            "cloud_cover": 66.125,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.1,
+            "wind_score": 0.508,
+            "onshore_score": 0.499,
+            "rain_score": 0.731,
+            "current_score": 0.5,
+            "raw_risk": 0.489,
+            "visibility": 0.246,
+            "calibrated_score": 0.416,
+            "probability": 0.127
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 17.879166666666666,
+            "wind_speed_10m": 18.558333333333334,
+            "wind_direction_10m": 193.5,
+            "precipitation": 3.0999999999999996,
+            "cloud_cover": 69.16666666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.388,
+            "wind_score": 0.0,
+            "onshore_score": 0.17,
+            "rain_score": 0.703,
+            "current_score": 0.5,
+            "raw_risk": 0.402,
+            "visibility": 0.179,
+            "calibrated_score": 0.335,
+            "probability": 0.053
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 10.366666666666667,
+            "wind_speed_10m": 12.041666666666666,
+            "wind_direction_10m": 141.29166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 3.25,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.033,
+            "onshore_score": 0.647,
+            "rain_score": 1.0,
+            "current_score": 0.5,
+            "raw_risk": 0.441,
+            "visibility": 0.561,
+            "calibrated_score": 0.477,
+            "probability": 0.23
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 13.5375,
+            "wind_speed_10m": 15.4125,
+            "wind_direction_10m": 219.70833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 4.416666666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.001,
+            "onshore_score": 0.062,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.332,
+            "visibility": 0.554,
+            "calibrated_score": 0.399,
+            "probability": 0.106
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 14.304166666666667,
+            "wind_speed_10m": 17.2625,
+            "wind_direction_10m": 153.75,
+            "precipitation": 0.0,
+            "cloud_cover": 15.958333333333334,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.03,
+            "wind_score": 0.0,
+            "onshore_score": 0.511,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.4,
+            "visibility": 0.487,
+            "calibrated_score": 0.426,
+            "probability": 0.14
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 8.991666666666667,
+            "wind_speed_10m": 15.308333333333334,
+            "wind_direction_10m": 170.375,
+            "precipitation": 0.0,
+            "cloud_cover": 1.4166666666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.001,
+            "onshore_score": 0.344,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.371,
+            "visibility": 0.572,
+            "calibrated_score": 0.431,
+            "probability": 0.148
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "lat": 26.664,
+        "lon": 119.547,
+        "notes": "闽东沿海"
+      },
+      "region_preset": {
+        "temp_peak": 26.5,
+        "sst_peak": 25.0,
+        "wind_peak": 5.2,
+        "onshore_dir": 115.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": 0.189,
+        "best_probability": 0.529,
+        "best_date": "2026-04-05",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 16.520833333333332,
+            "wind_speed_10m": 6.379166666666666,
+            "wind_direction_10m": 224.375,
+            "precipitation": 0.0,
+            "cloud_cover": 81.45833333333333,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.002,
+            "wind_score": 0.909,
+            "onshore_score": 0.138,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.517,
+            "visibility": 0.315,
+            "calibrated_score": 0.456,
+            "probability": 0.189
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 14.129166666666666,
+            "wind_speed_10m": 4.420833333333333,
+            "wind_direction_10m": 106.83333333333333,
+            "precipitation": 5.7,
+            "cloud_cover": 98.04166666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.959,
+            "onshore_score": 0.989,
+            "rain_score": 0.496,
+            "current_score": 0.5,
+            "raw_risk": 0.611,
+            "visibility": 0.422,
+            "calibrated_score": 0.554,
+            "probability": 0.425
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 16.020833333333332,
+            "wind_speed_10m": 4.908333333333333,
+            "wind_direction_10m": 189.83333333333334,
+            "precipitation": 26.300000000000008,
+            "cloud_cover": 99.79166666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.994,
+            "onshore_score": 0.396,
+            "rain_score": 0.198,
+            "current_score": 0.5,
+            "raw_risk": 0.501,
+            "visibility": 0.38,
+            "calibrated_score": 0.465,
+            "probability": 0.205
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 18.858333333333334,
+            "wind_speed_10m": 6.9125,
+            "wind_direction_10m": 186.20833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 79.04166666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.236,
+            "wind_score": 0.818,
+            "onshore_score": 0.433,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.583,
+            "visibility": 0.267,
+            "calibrated_score": 0.488,
+            "probability": 0.253
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 18.40833333333333,
+            "wind_speed_10m": 4.4375,
+            "wind_direction_10m": 183.375,
+            "precipitation": 0.30000000000000004,
+            "cloud_cover": 73.70833333333333,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.191,
+            "wind_score": 0.961,
+            "onshore_score": 0.462,
+            "rain_score": 0.784,
+            "current_score": 0.5,
+            "raw_risk": 0.602,
+            "visibility": 0.563,
+            "calibrated_score": 0.59,
+            "probability": 0.529
+          },
+          "level": "中",
+          "observation": "适合观察"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 19.329166666666666,
+            "wind_speed_10m": 4.5125,
+            "wind_direction_10m": 206.875,
+            "precipitation": 40.8,
+            "cloud_cover": 98.75,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.283,
+            "wind_score": 0.968,
+            "onshore_score": 0.248,
+            "rain_score": 0.0,
+            "current_score": 0.5,
+            "raw_risk": 0.502,
+            "visibility": 0.414,
+            "calibrated_score": 0.476,
+            "probability": 0.227
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 20.154166666666665,
+            "wind_speed_10m": 6.216666666666667,
+            "wind_direction_10m": 171.58333333333334,
+            "precipitation": 10.199999999999996,
+            "cloud_cover": 98.16666666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.365,
+            "wind_score": 0.932,
+            "onshore_score": 0.589,
+            "rain_score": 0.256,
+            "current_score": 0.5,
+            "raw_risk": 0.586,
+            "visibility": 0.238,
+            "calibrated_score": 0.482,
+            "probability": 0.239
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 27.994,
+        "lon": 120.699,
+        "notes": "温州沿海"
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": 0.183,
+        "best_probability": 0.399,
+        "best_date": "2026-04-05",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 16.445833333333333,
+            "wind_speed_10m": 4.620833333333334,
+            "wind_direction_10m": 188.91666666666666,
+            "precipitation": 0.4,
+            "cloud_cover": 85.25,
+            "sea_surface_temperature": 15.775,
+            "ocean_current_velocity": 0.3958333333333333,
+            "ocean_current_direction": 142.79166666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.045,
+            "wind_score": 0.977,
+            "onshore_score": 0.357,
+            "rain_score": 0.779,
+            "current_score": 0.72,
+            "raw_risk": 0.439,
+            "visibility": 0.486,
+            "calibrated_score": 0.453,
+            "probability": 0.183
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 16.158333333333335,
+            "wind_speed_10m": 4.254166666666666,
+            "wind_direction_10m": 147.04166666666666,
+            "precipitation": 1.6,
+            "cloud_cover": 91.04166666666667,
+            "sea_surface_temperature": 16.029166666666665,
+            "ocean_current_velocity": 0.4666666666666667,
+            "ocean_current_direction": 117.04166666666667
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.016,
+            "wind_score": 0.94,
+            "onshore_score": 0.797,
+            "rain_score": 0.715,
+            "current_score": 0.485,
+            "raw_risk": 0.456,
+            "visibility": 0.469,
+            "calibrated_score": 0.46,
+            "probability": 0.196
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 14.908333333333333,
+            "wind_speed_10m": 2.529166666666667,
+            "wind_direction_10m": 249.79166666666666,
+            "precipitation": 15.700000000000003,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 16.0375,
+            "ocean_current_velocity": 0.4791666666666667,
+            "ocean_current_direction": 84.75
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.613,
+            "onshore_score": 0.04,
+            "rain_score": 0.094,
+            "current_score": 0.445,
+            "raw_risk": 0.219,
+            "visibility": 0.32,
+            "calibrated_score": 0.249,
+            "probability": 0.02
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 19.6,
+            "wind_speed_10m": 5.404166666666667,
+            "wind_direction_10m": 231.45833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 83.0,
+            "sea_surface_temperature": 16.720833333333335,
+            "ocean_current_velocity": 0.5166666666666666,
+            "ocean_current_direction": 149.83333333333334
+          },
+          "scores": {
+            "sst_score": 0.028,
+            "temp_score": 0.36,
+            "wind_score": 0.997,
+            "onshore_score": 0.087,
+            "rain_score": 0.8,
+            "current_score": 0.334,
+            "raw_risk": 0.426,
+            "visibility": 0.427,
+            "calibrated_score": 0.426,
+            "probability": 0.141
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 18.858333333333334,
+            "wind_speed_10m": 4.925,
+            "wind_direction_10m": 150.70833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 72.91666666666667,
+            "sea_surface_temperature": 17.333333333333332,
+            "ocean_current_velocity": 0.45833333333333337,
+            "ocean_current_direction": 127.20833333333333
+          },
+          "scores": {
+            "sst_score": 0.104,
+            "temp_score": 0.286,
+            "wind_score": 0.995,
+            "onshore_score": 0.76,
+            "rain_score": 0.8,
+            "current_score": 0.512,
+            "raw_risk": 0.55,
+            "visibility": 0.534,
+            "calibrated_score": 0.545,
+            "probability": 0.399
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 19.366666666666667,
+            "wind_speed_10m": 2.2583333333333333,
+            "wind_direction_10m": 155.08333333333334,
+            "precipitation": 28.499999999999996,
+            "cloud_cover": 98.83333333333333,
+            "sea_surface_temperature": 17.866666666666667,
+            "ocean_current_velocity": 0.4,
+            "ocean_current_direction": 117.91666666666667
+          },
+          "scores": {
+            "sst_score": 0.171,
+            "temp_score": 0.337,
+            "wind_score": 0.552,
+            "onshore_score": 0.715,
+            "rain_score": 0.0,
+            "current_score": 0.707,
+            "raw_risk": 0.43,
+            "visibility": 0.294,
+            "calibrated_score": 0.389,
+            "probability": 0.096
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 20.708333333333332,
+            "wind_speed_10m": 4.195833333333334,
+            "wind_direction_10m": 179.58333333333334,
+            "precipitation": 1.5,
+            "cloud_cover": 97.5,
+            "sea_surface_temperature": 17.704166666666666,
+            "ocean_current_velocity": 0.4083333333333333,
+            "ocean_current_direction": 169.33333333333334
+          },
+          "scores": {
+            "sst_score": 0.151,
+            "temp_score": 0.471,
+            "wind_score": 0.933,
+            "onshore_score": 0.449,
+            "rain_score": 0.72,
+            "current_score": 0.679,
+            "raw_risk": 0.551,
+            "visibility": 0.432,
+            "calibrated_score": 0.515,
+            "probability": 0.318
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 23.111,
+        "lon": 114.415,
+        "notes": "惠州近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.161,
+        "best_probability": 0.687,
+        "best_date": "2026-04-07",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 22.604166666666668,
+            "wind_speed_10m": 10.029166666666667,
+            "wind_direction_10m": 50.166666666666664,
+            "precipitation": 2.4,
+            "cloud_cover": 48.75,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.46,
+            "wind_score": 0.153,
+            "onshore_score": 0.396,
+            "rain_score": 0.672,
+            "current_score": 0.5,
+            "raw_risk": 0.499,
+            "visibility": 0.302,
+            "calibrated_score": 0.44,
+            "probability": 0.161
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 21.841666666666665,
+            "wind_speed_10m": 8.704166666666667,
+            "wind_direction_10m": 115.29166666666667,
+            "precipitation": 8.5,
+            "cloud_cover": 91.0,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.384,
+            "wind_score": 0.352,
+            "onshore_score": 0.985,
+            "rain_score": 0.51,
+            "current_score": 0.5,
+            "raw_risk": 0.584,
+            "visibility": 0.079,
+            "calibrated_score": 0.432,
+            "probability": 0.15
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 23.5375,
+            "wind_speed_10m": 8.45,
+            "wind_direction_10m": 171.875,
+            "precipitation": 21.099999999999998,
+            "cloud_cover": 93.58333333333333,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.554,
+            "wind_score": 0.401,
+            "onshore_score": 0.695,
+            "rain_score": 0.03,
+            "current_score": 0.5,
+            "raw_risk": 0.528,
+            "visibility": 0.073,
+            "calibrated_score": 0.391,
+            "probability": 0.098
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 23.120833333333334,
+            "wind_speed_10m": 4.225,
+            "wind_direction_10m": 227.25,
+            "precipitation": 32.6,
+            "cloud_cover": 96.04166666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.512,
+            "wind_score": 0.978,
+            "onshore_score": 0.178,
+            "rain_score": 0.0,
+            "current_score": 0.5,
+            "raw_risk": 0.543,
+            "visibility": 0.44,
+            "calibrated_score": 0.512,
+            "probability": 0.311
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 23.329166666666666,
+            "wind_speed_10m": 5.320833333333333,
+            "wind_direction_10m": 107.91666666666667,
+            "precipitation": 18.899999999999995,
+            "cloud_cover": 96.25,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.533,
+            "wind_score": 0.982,
+            "onshore_score": 0.953,
+            "rain_score": 0.0,
+            "current_score": 0.5,
+            "raw_risk": 0.656,
+            "visibility": 0.359,
+            "calibrated_score": 0.567,
+            "probability": 0.462
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 25.558333333333334,
+            "wind_speed_10m": 8.604166666666666,
+            "wind_direction_10m": 145.875,
+            "precipitation": 4.8,
+            "cloud_cover": 98.375,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.756,
+            "wind_score": 0.371,
+            "onshore_score": 0.931,
+            "rain_score": 0.544,
+            "current_score": 0.5,
+            "raw_risk": 0.647,
+            "visibility": 0.039,
+            "calibrated_score": 0.464,
+            "probability": 0.204
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 26.758333333333333,
+            "wind_speed_10m": 6.270833333333333,
+            "wind_direction_10m": 144.54166666666666,
+            "precipitation": 0.30000000000000004,
+            "cloud_cover": 88.79166666666667,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.876,
+            "wind_score": 0.862,
+            "onshore_score": 0.939,
+            "rain_score": 1.0,
+            "current_score": 0.5,
+            "raw_risk": 0.802,
+            "visibility": 0.285,
+            "calibrated_score": 0.647,
+            "probability": 0.687
+          },
+          "level": "中",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "lat": 39.085,
+        "lon": 117.2,
+        "notes": "天津近海"
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": 0.145,
+        "best_probability": 0.497,
+        "best_date": "2026-04-02",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 11.025,
+            "wind_speed_10m": 10.233333333333333,
+            "wind_direction_10m": 149.54166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 25.583333333333332,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.153,
+            "onshore_score": 0.557,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.427,
+            "visibility": 0.435,
+            "calibrated_score": 0.429,
+            "probability": 0.145
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 12.175,
+            "wind_speed_10m": 5.366666666666666,
+            "wind_direction_10m": 158.95833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 47.875,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.991,
+            "onshore_score": 0.456,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.555,
+            "visibility": 0.635,
+            "calibrated_score": 0.579,
+            "probability": 0.497
+          },
+          "level": "中",
+          "observation": "适合观察"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 16.008333333333333,
+            "wind_speed_10m": 13.816666666666666,
+            "wind_direction_10m": 212.29166666666666,
+            "precipitation": 3.2,
+            "cloud_cover": 60.5,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.201,
+            "wind_score": 0.005,
+            "onshore_score": 0.084,
+            "rain_score": 0.629,
+            "current_score": 0.5,
+            "raw_risk": 0.351,
+            "visibility": 0.229,
+            "calibrated_score": 0.314,
+            "probability": 0.042
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 12.116666666666667,
+            "wind_speed_10m": 10.691666666666666,
+            "wind_direction_10m": 169.83333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 10.541666666666666,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.108,
+            "onshore_score": 0.349,
+            "rain_score": 1.0,
+            "current_score": 0.5,
+            "raw_risk": 0.412,
+            "visibility": 0.52,
+            "calibrated_score": 0.445,
+            "probability": 0.169
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 13.741666666666667,
+            "wind_speed_10m": 11.3,
+            "wind_direction_10m": 255.875,
+            "precipitation": 0.0,
+            "cloud_cover": 39.875,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.066,
+            "onshore_score": 0.011,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.336,
+            "visibility": 0.349,
+            "calibrated_score": 0.34,
+            "probability": 0.056
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 14.095833333333333,
+            "wind_speed_10m": 14.533333333333333,
+            "wind_direction_10m": 226.41666666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 36.125,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.01,
+            "wind_score": 0.002,
+            "onshore_score": 0.046,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.331,
+            "visibility": 0.37,
+            "calibrated_score": 0.343,
+            "probability": 0.058
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 10.0625,
+            "wind_speed_10m": 14.975,
+            "wind_direction_10m": 276.4583333333333,
+            "precipitation": 0.0,
+            "cloud_cover": 10.958333333333334,
+            "sea_surface_temperature": null,
+            "ocean_current_velocity": null,
+            "ocean_current_direction": null
+          },
+          "scores": {
+            "sst_score": 0.5,
+            "temp_score": 0.0,
+            "wind_score": 0.001,
+            "onshore_score": 0.007,
+            "rain_score": 0.8,
+            "current_score": 0.5,
+            "raw_risk": 0.324,
+            "visibility": 0.516,
+            "calibrated_score": 0.382,
+            "probability": 0.089
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "lat": 37.513,
+        "lon": 122.12,
+        "notes": "威海近岸"
+      },
+      "region_preset": {
+        "temp_peak": 25.0,
+        "sst_peak": 23.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 100.0,
+        "bias": 0.04
+      },
+      "summary": {
+        "today_probability": 0.131,
+        "best_probability": 0.131,
+        "best_date": "2026-04-01",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 9.066666666666666,
+            "wind_speed_10m": 7.229166666666667,
+            "wind_direction_10m": 255.95833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 10.666666666666666,
+            "sea_surface_temperature": 7.820833333333333,
+            "ocean_current_velocity": 0.4041666666666667,
+            "ocean_current_direction": 108.79166666666667
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.711,
+            "onshore_score": 0.018,
+            "rain_score": 0.8,
+            "current_score": 0.693,
+            "raw_risk": 0.328,
+            "visibility": 0.632,
+            "calibrated_score": 0.419,
+            "probability": 0.131
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 11.033333333333333,
+            "wind_speed_10m": 6.258333333333334,
+            "wind_direction_10m": 199.45833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 44.708333333333336,
+            "sea_surface_temperature": 8.1125,
+            "ocean_current_velocity": 0.6583333333333333,
+            "ocean_current_direction": 86.33333333333333
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.897,
+            "onshore_score": 0.195,
+            "rain_score": 0.8,
+            "current_score": 0.076,
+            "raw_risk": 0.316,
+            "visibility": 0.543,
+            "calibrated_score": 0.384,
+            "probability": 0.091
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 13.683333333333334,
+            "wind_speed_10m": 31.079166666666666,
+            "wind_direction_10m": 184.83333333333334,
+            "precipitation": 1.3,
+            "cloud_cover": 88.33333333333333,
+            "sea_surface_temperature": 7.9875,
+            "ocean_current_velocity": 0.38333333333333336,
+            "ocean_current_direction": 123.0
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.304,
+            "rain_score": 0.731,
+            "current_score": 0.76,
+            "raw_risk": 0.247,
+            "visibility": 0.068,
+            "calibrated_score": 0.193,
+            "probability": 0.01
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 6.908333333333333,
+            "wind_speed_10m": 26.454166666666666,
+            "wind_direction_10m": 290.125,
+            "precipitation": 1.8,
+            "cloud_cover": 44.25,
+            "sea_surface_temperature": 7.829166666666667,
+            "ocean_current_velocity": 1.1708333333333334,
+            "ocean_current_direction": 106.20833333333333
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.008,
+            "rain_score": 0.773,
+            "current_score": 0.0,
+            "raw_risk": 0.126,
+            "visibility": 0.323,
+            "calibrated_score": 0.185,
+            "probability": 0.01
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 10.045833333333334,
+            "wind_speed_10m": 17.729166666666668,
+            "wind_direction_10m": 223.83333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 22.041666666666668,
+            "sea_surface_temperature": 7.741666666666666,
+            "ocean_current_velocity": 0.4291666666666667,
+            "ocean_current_direction": 178.58333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.079,
+            "rain_score": 0.911,
+            "current_score": 0.609,
+            "raw_risk": 0.218,
+            "visibility": 0.452,
+            "calibrated_score": 0.289,
+            "probability": 0.031
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 10.729166666666666,
+            "wind_speed_10m": 18.554166666666667,
+            "wind_direction_10m": 231.08333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 64.625,
+            "sea_surface_temperature": 7.941666666666666,
+            "ocean_current_velocity": 0.525,
+            "ocean_current_direction": 96.25
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.058,
+            "rain_score": 0.8,
+            "current_score": 0.311,
+            "raw_risk": 0.17,
+            "visibility": 0.205,
+            "calibrated_score": 0.181,
+            "probability": 0.009
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 6.9375,
+            "wind_speed_10m": 31.629166666666666,
+            "wind_direction_10m": 320.125,
+            "precipitation": 0.30000000000000004,
+            "cloud_cover": 14.666666666666666,
+            "sea_surface_temperature": 7.904166666666667,
+            "ocean_current_velocity": 1.0666666666666667,
+            "ocean_current_direction": 87.83333333333333
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.039,
+            "rain_score": 0.784,
+            "current_score": 0.0,
+            "raw_risk": 0.132,
+            "visibility": 0.495,
+            "calibrated_score": 0.241,
+            "probability": 0.018
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 24.873,
+        "lon": 118.675,
+        "notes": "泉州沿海"
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.125,
+        "best_probability": 0.305,
+        "best_date": "2026-04-05",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 20.470833333333335,
+            "wind_speed_10m": 9.029166666666667,
+            "wind_direction_10m": 109.375,
+            "precipitation": 0.5,
+            "cloud_cover": 53.875,
+            "sea_surface_temperature": 19.254166666666666,
+            "ocean_current_velocity": 0.9625,
+            "ocean_current_direction": 214.125
+          },
+          "scores": {
+            "sst_score": 0.219,
+            "temp_score": 0.347,
+            "wind_score": 0.366,
+            "onshore_score": 0.982,
+            "rain_score": 0.773,
+            "current_score": 0.0,
+            "raw_risk": 0.469,
+            "visibility": 0.285,
+            "calibrated_score": 0.414,
+            "probability": 0.125
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 18.84166666666667,
+            "wind_speed_10m": 7.725,
+            "wind_direction_10m": 105.95833333333333,
+            "precipitation": 2.5,
+            "cloud_cover": 83.16666666666667,
+            "sea_surface_temperature": 19.354166666666668,
+            "ocean_current_velocity": 0.9875,
+            "ocean_current_direction": 204.625
+          },
+          "scores": {
+            "sst_score": 0.232,
+            "temp_score": 0.184,
+            "wind_score": 0.646,
+            "onshore_score": 0.968,
+            "rain_score": 0.667,
+            "current_score": 0.0,
+            "raw_risk": 0.479,
+            "visibility": 0.172,
+            "calibrated_score": 0.387,
+            "probability": 0.094
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 19.28333333333333,
+            "wind_speed_10m": 2.908333333333333,
+            "wind_direction_10m": 249.25,
+            "precipitation": 12.699999999999998,
+            "cloud_cover": 99.875,
+            "sea_surface_temperature": 19.4875,
+            "ocean_current_velocity": 0.8958333333333334,
+            "ocean_current_direction": 188.91666666666666
+          },
+          "scores": {
+            "sst_score": 0.248,
+            "temp_score": 0.228,
+            "wind_score": 0.698,
+            "onshore_score": 0.063,
+            "rain_score": 0.294,
+            "current_score": 0.002,
+            "raw_risk": 0.333,
+            "visibility": 0.363,
+            "calibrated_score": 0.342,
+            "probability": 0.057
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 21.275,
+            "wind_speed_10m": 5.0,
+            "wind_direction_10m": 167.95833333333334,
+            "precipitation": 8.7,
+            "cloud_cover": 97.04166666666667,
+            "sea_surface_temperature": 19.970833333333335,
+            "ocean_current_velocity": 0.9666666666666667,
+            "ocean_current_direction": 146.375
+          },
+          "scores": {
+            "sst_score": 0.309,
+            "temp_score": 0.427,
+            "wind_score": 0.997,
+            "onshore_score": 0.684,
+            "rain_score": 0.336,
+            "current_score": 0.0,
+            "raw_risk": 0.528,
+            "visibility": 0.388,
+            "calibrated_score": 0.486,
+            "probability": 0.248
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 21.504166666666666,
+            "wind_speed_10m": 3.8,
+            "wind_direction_10m": 180.79166666666666,
+            "precipitation": 4.8,
+            "cloud_cover": 91.95833333333333,
+            "sea_surface_temperature": 20.216666666666665,
+            "ocean_current_velocity": 0.7,
+            "ocean_current_direction": 173.70833333333334
+          },
+          "scores": {
+            "sst_score": 0.34,
+            "temp_score": 0.45,
+            "wind_score": 0.874,
+            "onshore_score": 0.543,
+            "rain_score": 0.562,
+            "current_score": 0.044,
+            "raw_risk": 0.53,
+            "visibility": 0.465,
+            "calibrated_score": 0.51,
+            "probability": 0.305
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 22.1875,
+            "wind_speed_10m": 8.291666666666666,
+            "wind_direction_10m": 200.375,
+            "precipitation": 27.60000000000001,
+            "cloud_cover": 99.625,
+            "sea_surface_temperature": 20.2375,
+            "ocean_current_velocity": 1.3416666666666668,
+            "ocean_current_direction": 125.08333333333333
+          },
+          "scores": {
+            "sst_score": 0.342,
+            "temp_score": 0.519,
+            "wind_score": 0.519,
+            "onshore_score": 0.344,
+            "rain_score": 0.252,
+            "current_score": 0.0,
+            "raw_risk": 0.415,
+            "visibility": 0.044,
+            "calibrated_score": 0.304,
+            "probability": 0.037
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 24.566666666666666,
+            "wind_speed_10m": 9.0,
+            "wind_direction_10m": 179.08333333333334,
+            "precipitation": 12.9,
+            "cloud_cover": 98.625,
+            "sea_surface_temperature": 20.266666666666666,
+            "ocean_current_velocity": 0.8708333333333333,
+            "ocean_current_direction": 145.16666666666666
+          },
+          "scores": {
+            "sst_score": 0.346,
+            "temp_score": 0.757,
+            "wind_score": 0.371,
+            "onshore_score": 0.562,
+            "rain_score": 0.112,
+            "current_score": 0.003,
+            "raw_risk": 0.447,
+            "visibility": 0.026,
+            "calibrated_score": 0.321,
+            "probability": 0.045
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 29.868,
+        "lon": 121.549,
+        "notes": "宁波沿海"
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": 0.111,
+        "best_probability": 0.259,
+        "best_date": "2026-04-05",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 14.9875,
+            "wind_speed_10m": 4.4625,
+            "wind_direction_10m": 184.04166666666666,
+            "precipitation": 5.500000000000001,
+            "cloud_cover": 69.95833333333333,
+            "sea_surface_temperature": 14.829166666666667,
+            "ocean_current_velocity": 3.254166666666667,
+            "ocean_current_direction": 201.0
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.963,
+            "onshore_score": 0.404,
+            "rain_score": 0.507,
+            "current_score": 0.0,
+            "raw_risk": 0.326,
+            "visibility": 0.583,
+            "calibrated_score": 0.403,
+            "probability": 0.111
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 15.916666666666666,
+            "wind_speed_10m": 6.2625,
+            "wind_direction_10m": 176.16666666666666,
+            "precipitation": 0.8,
+            "cloud_cover": 65.58333333333333,
+            "sea_surface_temperature": 15.125,
+            "ocean_current_velocity": 2.9583333333333335,
+            "ocean_current_direction": 198.66666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.925,
+            "onshore_score": 0.485,
+            "rain_score": 0.967,
+            "current_score": 0.0,
+            "raw_risk": 0.382,
+            "visibility": 0.421,
+            "calibrated_score": 0.393,
+            "probability": 0.1
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 15.716666666666667,
+            "wind_speed_10m": 7.1875,
+            "wind_direction_10m": 191.375,
+            "precipitation": 21.4,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 15.020833333333334,
+            "ocean_current_velocity": 2.9166666666666665,
+            "ocean_current_direction": 187.16666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.763,
+            "onshore_score": 0.335,
+            "rain_score": 0.026,
+            "current_score": 0.0,
+            "raw_risk": 0.229,
+            "visibility": 0.118,
+            "calibrated_score": 0.196,
+            "probability": 0.011
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 18.320833333333333,
+            "wind_speed_10m": 6.479166666666667,
+            "wind_direction_10m": 171.5,
+            "precipitation": 0.0,
+            "cloud_cover": 75.25,
+            "sea_surface_temperature": 15.304166666666667,
+            "ocean_current_velocity": 3.0375,
+            "ocean_current_direction": 198.625
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.232,
+            "wind_score": 0.894,
+            "onshore_score": 0.535,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.404,
+            "visibility": 0.338,
+            "calibrated_score": 0.385,
+            "probability": 0.091
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 19.708333333333332,
+            "wind_speed_10m": 5.004166666666666,
+            "wind_direction_10m": 156.54166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 70.41666666666667,
+            "sea_surface_temperature": 15.8375,
+            "ocean_current_velocity": 2.879166666666667,
+            "ocean_current_direction": 196.25
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.371,
+            "wind_score": 0.997,
+            "onshore_score": 0.699,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.468,
+            "visibility": 0.542,
+            "calibrated_score": 0.49,
+            "probability": 0.259
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 19.291666666666668,
+            "wind_speed_10m": 3.495833333333333,
+            "wind_direction_10m": 138.95833333333334,
+            "precipitation": 5.399999999999999,
+            "cloud_cover": 98.625,
+            "sea_surface_temperature": 16.804166666666667,
+            "ocean_current_velocity": 2.5375,
+            "ocean_current_direction": 191.25
+          },
+          "scores": {
+            "sst_score": 0.038,
+            "temp_score": 0.329,
+            "wind_score": 0.819,
+            "onshore_score": 0.871,
+            "rain_score": 0.512,
+            "current_score": 0.0,
+            "raw_risk": 0.435,
+            "visibility": 0.415,
+            "calibrated_score": 0.429,
+            "probability": 0.145
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 18.05,
+            "wind_speed_10m": 7.858333333333333,
+            "wind_direction_10m": 32.291666666666664,
+            "precipitation": 0.0,
+            "cloud_cover": 81.45833333333333,
+            "sea_surface_temperature": 16.816666666666666,
+            "ocean_current_velocity": 2.7083333333333335,
+            "ocean_current_direction": 186.20833333333334
+          },
+          "scores": {
+            "sst_score": 0.04,
+            "temp_score": 0.205,
+            "wind_score": 0.616,
+            "onshore_score": 0.369,
+            "rain_score": 1.0,
+            "current_score": 0.0,
+            "raw_risk": 0.363,
+            "visibility": 0.173,
+            "calibrated_score": 0.306,
+            "probability": 0.038
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 22.27,
+        "lon": 113.576,
+        "notes": "珠海近岸"
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.099,
+        "best_probability": 0.626,
+        "best_date": "2026-04-04",
+        "best_level": "中",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 23.0375,
+            "wind_speed_10m": 11.304166666666667,
+            "wind_direction_10m": 256.4583333333333,
+            "precipitation": 4.2,
+            "cloud_cover": 81.54166666666667,
+            "sea_surface_temperature": 25.6875,
+            "ocean_current_velocity": 1.0833333333333333,
+            "ocean_current_direction": 122.83333333333333
+          },
+          "scores": {
+            "sst_score": 0.961,
+            "temp_score": 0.504,
+            "wind_score": 0.055,
+            "onshore_score": 0.057,
+            "rain_score": 0.576,
+            "current_score": 0.0,
+            "raw_risk": 0.515,
+            "visibility": 0.108,
+            "calibrated_score": 0.393,
+            "probability": 0.099
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 23.854166666666668,
+            "wind_speed_10m": 10.925,
+            "wind_direction_10m": 128.91666666666666,
+            "precipitation": 6.800000000000001,
+            "cloud_cover": 91.20833333333333,
+            "sea_surface_temperature": 25.716666666666665,
+            "ocean_current_velocity": 1.2083333333333333,
+            "ocean_current_direction": 118.66666666666667
+          },
+          "scores": {
+            "sst_score": 0.965,
+            "temp_score": 0.585,
+            "wind_score": 0.076,
+            "onshore_score": 0.997,
+            "rain_score": 0.725,
+            "current_score": 0.0,
+            "raw_risk": 0.681,
+            "visibility": 0.052,
+            "calibrated_score": 0.493,
+            "probability": 0.263
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 25.3875,
+            "wind_speed_10m": 18.4,
+            "wind_direction_10m": 182.83333333333334,
+            "precipitation": 4.0,
+            "cloud_cover": 91.20833333333333,
+            "sea_surface_temperature": 25.929166666666667,
+            "ocean_current_velocity": 1.2125,
+            "ocean_current_direction": 100.29166666666667
+          },
+          "scores": {
+            "sst_score": 0.991,
+            "temp_score": 0.739,
+            "wind_score": 0.0,
+            "onshore_score": 0.575,
+            "rain_score": 0.719,
+            "current_score": 0.0,
+            "raw_risk": 0.643,
+            "visibility": 0.051,
+            "calibrated_score": 0.465,
+            "probability": 0.206
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 24.40416666666667,
+            "wind_speed_10m": 4.9875,
+            "wind_direction_10m": 209.375,
+            "precipitation": 17.000000000000004,
+            "cloud_cover": 93.0,
+            "sea_surface_temperature": 26.004166666666666,
+            "ocean_current_velocity": 1.2041666666666666,
+            "ocean_current_direction": 120.66666666666667
+          },
+          "scores": {
+            "sst_score": 0.999,
+            "temp_score": 0.64,
+            "wind_score": 0.998,
+            "onshore_score": 0.308,
+            "rain_score": 0.3,
+            "current_score": 0.0,
+            "raw_risk": 0.714,
+            "visibility": 0.412,
+            "calibrated_score": 0.624,
+            "probability": 0.626
+          },
+          "level": "中",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 24.816666666666666,
+            "wind_speed_10m": 12.170833333333333,
+            "wind_direction_10m": 149.58333333333334,
+            "precipitation": 17.099999999999998,
+            "cloud_cover": 95.04166666666667,
+            "sea_surface_temperature": 26.0,
+            "ocean_current_velocity": 1.125,
+            "ocean_current_direction": 95.70833333333333
+          },
+          "scores": {
+            "sst_score": 1.0,
+            "temp_score": 0.682,
+            "wind_score": 0.024,
+            "onshore_score": 0.905,
+            "rain_score": 0.0,
+            "current_score": 0.0,
+            "raw_risk": 0.607,
+            "visibility": 0.029,
+            "calibrated_score": 0.433,
+            "probability": 0.151
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 26.141666666666666,
+            "wind_speed_10m": 19.2625,
+            "wind_direction_10m": 180.33333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 91.875,
+            "sea_surface_temperature": 26.225,
+            "ocean_current_velocity": 1.0916666666666668,
+            "ocean_current_direction": 93.625
+          },
+          "scores": {
+            "sst_score": 0.962,
+            "temp_score": 0.814,
+            "wind_score": 0.0,
+            "onshore_score": 0.603,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.66,
+            "visibility": 0.047,
+            "calibrated_score": 0.476,
+            "probability": 0.227
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 26.716666666666665,
+            "wind_speed_10m": 13.1875,
+            "wind_direction_10m": 176.16666666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 82.625,
+            "sea_surface_temperature": 26.629166666666666,
+            "ocean_current_velocity": 0.9625,
+            "ocean_current_direction": 94.375
+          },
+          "scores": {
+            "sst_score": 0.895,
+            "temp_score": 0.872,
+            "wind_score": 0.008,
+            "onshore_score": 0.649,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.657,
+            "visibility": 0.101,
+            "calibrated_score": 0.49,
+            "probability": 0.258
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "lat": 36.067,
+        "lon": 120.382,
+        "notes": "青岛近岸"
+      },
+      "region_preset": {
+        "temp_peak": 25.0,
+        "sst_peak": 23.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 100.0,
+        "bias": 0.04
+      },
+      "summary": {
+        "today_probability": 0.061,
+        "best_probability": 0.061,
+        "best_date": "2026-04-01",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 12.3375,
+            "wind_speed_10m": 8.295833333333333,
+            "wind_direction_10m": 151.45833333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 27.791666666666668,
+            "sea_surface_temperature": 10.095833333333333,
+            "ocean_current_velocity": 1.5583333333333333,
+            "ocean_current_direction": 178.75
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.475,
+            "onshore_score": 0.646,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.299,
+            "visibility": 0.461,
+            "calibrated_score": 0.348,
+            "probability": 0.061
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 12.875,
+            "wind_speed_10m": 11.1,
+            "wind_direction_10m": 142.75,
+            "precipitation": 0.0,
+            "cloud_cover": 66.45833333333333,
+            "sea_surface_temperature": 10.333333333333334,
+            "ocean_current_velocity": 1.5916666666666666,
+            "ocean_current_direction": 194.16666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.078,
+            "onshore_score": 0.739,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.245,
+            "visibility": 0.195,
+            "calibrated_score": 0.23,
+            "probability": 0.016
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 12.025,
+            "wind_speed_10m": 20.820833333333333,
+            "wind_direction_10m": 158.16666666666666,
+            "precipitation": 1.3,
+            "cloud_cover": 96.95833333333333,
+            "sea_surface_temperature": 10.174999999999999,
+            "ocean_current_velocity": 1.5291666666666666,
+            "ocean_current_direction": 175.83333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.572,
+            "rain_score": 0.731,
+            "current_score": 0.0,
+            "raw_risk": 0.2,
+            "visibility": 0.018,
+            "calibrated_score": 0.146,
+            "probability": 0.006
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 10.375,
+            "wind_speed_10m": 17.920833333333334,
+            "wind_direction_10m": 288.2916666666667,
+            "precipitation": 0.0,
+            "cloud_cover": 31.875,
+            "sea_surface_temperature": 9.845833333333333,
+            "ocean_current_velocity": 1.5541666666666667,
+            "ocean_current_direction": 180.04166666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.008,
+            "rain_score": 0.869,
+            "current_score": 0.0,
+            "raw_risk": 0.137,
+            "visibility": 0.395,
+            "calibrated_score": 0.214,
+            "probability": 0.013
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 13.3375,
+            "wind_speed_10m": 15.666666666666666,
+            "wind_direction_10m": 219.5,
+            "precipitation": 0.0,
+            "cloud_cover": 15.5,
+            "sea_surface_temperature": 10.016666666666667,
+            "ocean_current_velocity": 1.4125,
+            "ocean_current_direction": 169.08333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.094,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.141,
+            "visibility": 0.49,
+            "calibrated_score": 0.246,
+            "probability": 0.019
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 13.8875,
+            "wind_speed_10m": 15.916666666666666,
+            "wind_direction_10m": 169.08333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 15.208333333333334,
+            "sea_surface_temperature": 10.1625,
+            "ocean_current_velocity": 1.4041666666666668,
+            "ocean_current_direction": 183.375
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.454,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.192,
+            "visibility": 0.492,
+            "calibrated_score": 0.282,
+            "probability": 0.029
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 10.15,
+            "wind_speed_10m": 21.108333333333334,
+            "wind_direction_10m": 352.875,
+            "precipitation": 0.0,
+            "cloud_cover": 15.083333333333334,
+            "sea_surface_temperature": 9.966666666666667,
+            "ocean_current_velocity": 1.275,
+            "ocean_current_direction": 182.0
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.15,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.149,
+            "visibility": 0.493,
+            "calibrated_score": 0.252,
+            "probability": 0.021
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "lat": 39.935,
+        "lon": 119.6,
+        "notes": "北戴河近岸"
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": 0.049,
+        "best_probability": 0.132,
+        "best_date": "2026-04-02",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 9.3875,
+            "wind_speed_10m": 9.966666666666667,
+            "wind_direction_10m": 149.375,
+            "precipitation": 0.0,
+            "cloud_cover": 20.708333333333332,
+            "sea_surface_temperature": 6.433333333333334,
+            "ocean_current_velocity": 0.5,
+            "ocean_current_direction": 126.95833333333333
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.184,
+            "onshore_score": 0.558,
+            "rain_score": 0.8,
+            "current_score": 0.381,
+            "raw_risk": 0.269,
+            "visibility": 0.465,
+            "calibrated_score": 0.328,
+            "probability": 0.049
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 8.7375,
+            "wind_speed_10m": 6.529166666666667,
+            "wind_direction_10m": 258.1666666666667,
+            "precipitation": 0.0,
+            "cloud_cover": 18.166666666666668,
+            "sea_surface_temperature": 6.558333333333334,
+            "ocean_current_velocity": 0.4708333333333333,
+            "ocean_current_direction": 119.45833333333333
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.852,
+            "onshore_score": 0.009,
+            "rain_score": 0.8,
+            "current_score": 0.471,
+            "raw_risk": 0.316,
+            "visibility": 0.663,
+            "calibrated_score": 0.42,
+            "probability": 0.132
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 10.204166666666666,
+            "wind_speed_10m": 8.679166666666667,
+            "wind_direction_10m": 113.0,
+            "precipitation": 7.2,
+            "cloud_cover": 85.79166666666667,
+            "sea_surface_temperature": 6.733333333333333,
+            "ocean_current_velocity": 0.4666666666666667,
+            "ocean_current_direction": 128.91666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.395,
+            "onshore_score": 0.916,
+            "rain_score": 0.416,
+            "current_score": 0.485,
+            "raw_risk": 0.325,
+            "visibility": 0.11,
+            "calibrated_score": 0.26,
+            "probability": 0.023
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 7.358333333333333,
+            "wind_speed_10m": 8.370833333333334,
+            "wind_direction_10m": 195.33333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 5.916666666666667,
+            "sea_surface_temperature": 6.825,
+            "ocean_current_velocity": 0.4083333333333333,
+            "ocean_current_direction": 95.04166666666667
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.459,
+            "onshore_score": 0.16,
+            "rain_score": 0.908,
+            "current_score": 0.679,
+            "raw_risk": 0.305,
+            "visibility": 0.584,
+            "calibrated_score": 0.389,
+            "probability": 0.095
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 10.479166666666668,
+            "wind_speed_10m": 9.5625,
+            "wind_direction_10m": 226.54166666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 31.166666666666668,
+            "sea_surface_temperature": 7.166666666666667,
+            "ocean_current_velocity": 0.5375,
+            "ocean_current_direction": 154.54166666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.24,
+            "onshore_score": 0.046,
+            "rain_score": 0.8,
+            "current_score": 0.279,
+            "raw_risk": 0.196,
+            "visibility": 0.408,
+            "calibrated_score": 0.26,
+            "probability": 0.023
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 10.383333333333333,
+            "wind_speed_10m": 8.554166666666667,
+            "wind_direction_10m": 220.5,
+            "precipitation": 1.2,
+            "cloud_cover": 67.125,
+            "sea_surface_temperature": 7.304166666666667,
+            "ocean_current_velocity": 0.44583333333333336,
+            "ocean_current_direction": 128.625
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.42,
+            "onshore_score": 0.06,
+            "rain_score": 0.736,
+            "current_score": 0.553,
+            "raw_risk": 0.252,
+            "visibility": 0.222,
+            "calibrated_score": 0.243,
+            "probability": 0.019
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 8.679166666666667,
+            "wind_speed_10m": 11.3375,
+            "wind_direction_10m": 321.2083333333333,
+            "precipitation": 0.0,
+            "cloud_cover": 6.083333333333333,
+            "sea_surface_temperature": 7.316666666666666,
+            "ocean_current_velocity": 0.35833333333333334,
+            "ocean_current_direction": 135.08333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.064,
+            "onshore_score": 0.064,
+            "rain_score": 0.86,
+            "current_score": 0.834,
+            "raw_risk": 0.236,
+            "visibility": 0.545,
+            "calibrated_score": 0.329,
+            "probability": 0.05
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 29.985,
+        "lon": 122.207,
+        "notes": "舟山群岛"
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": 0.032,
+        "best_probability": 0.088,
+        "best_date": "2026-04-02",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 13.895833333333334,
+            "wind_speed_10m": 7.033333333333333,
+            "wind_direction_10m": 255.375,
+            "precipitation": 4.3999999999999995,
+            "cloud_cover": 57.875,
+            "sea_surface_temperature": 14.379166666666666,
+            "ocean_current_velocity": 2.3,
+            "ocean_current_direction": 188.125
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.794,
+            "onshore_score": 0.03,
+            "rain_score": 0.565,
+            "current_score": 0.0,
+            "raw_risk": 0.251,
+            "visibility": 0.377,
+            "calibrated_score": 0.289,
+            "probability": 0.032
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 14.941666666666666,
+            "wind_speed_10m": 7.191666666666666,
+            "wind_direction_10m": 158.33333333333334,
+            "precipitation": 1.3,
+            "cloud_cover": 55.666666666666664,
+            "sea_surface_temperature": 14.525,
+            "ocean_current_velocity": 1.9416666666666667,
+            "ocean_current_direction": 185.20833333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.762,
+            "onshore_score": 0.68,
+            "rain_score": 1.0,
+            "current_score": 0.0,
+            "raw_risk": 0.385,
+            "visibility": 0.375,
+            "calibrated_score": 0.382,
+            "probability": 0.088
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 15.254166666666666,
+            "wind_speed_10m": 17.020833333333332,
+            "wind_direction_10m": 178.29166666666666,
+            "precipitation": 26.6,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 14.395833333333334,
+            "ocean_current_velocity": 2.2,
+            "ocean_current_direction": 177.91666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.463,
+            "rain_score": 0.069,
+            "current_score": 0.0,
+            "raw_risk": 0.122,
+            "visibility": 0.0,
+            "calibrated_score": 0.086,
+            "probability": 0.003
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 16.4375,
+            "wind_speed_10m": 13.854166666666666,
+            "wind_direction_10m": 234.625,
+            "precipitation": 0.0,
+            "cloud_cover": 63.416666666666664,
+            "sea_surface_temperature": 14.370833333333334,
+            "ocean_current_velocity": 1.9083333333333332,
+            "ocean_current_direction": 193.58333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.044,
+            "wind_score": 0.006,
+            "onshore_score": 0.077,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.157,
+            "visibility": 0.212,
+            "calibrated_score": 0.174,
+            "probability": 0.008
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 15.916666666666666,
+            "wind_speed_10m": 8.229166666666666,
+            "wind_direction_10m": 173.16666666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 67.08333333333333,
+            "sea_surface_temperature": 14.666666666666668,
+            "ocean_current_velocity": 1.8125,
+            "ocean_current_direction": 170.41666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.533,
+            "onshore_score": 0.517,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.301,
+            "visibility": 0.236,
+            "calibrated_score": 0.281,
+            "probability": 0.029
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 17.2,
+            "wind_speed_10m": 4.104166666666667,
+            "wind_direction_10m": 192.25,
+            "precipitation": 7.799999999999998,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 15.512500000000001,
+            "ocean_current_velocity": 1.45,
+            "ocean_current_direction": 195.83333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.12,
+            "wind_score": 0.921,
+            "onshore_score": 0.327,
+            "rain_score": 0.384,
+            "current_score": 0.0,
+            "raw_risk": 0.315,
+            "visibility": 0.419,
+            "calibrated_score": 0.346,
+            "probability": 0.06
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 16.554166666666667,
+            "wind_speed_10m": 12.129166666666666,
+            "wind_direction_10m": 205.41666666666666,
+            "precipitation": 0.0,
+            "cloud_cover": 83.0,
+            "sea_surface_temperature": 15.454166666666667,
+            "ocean_current_velocity": 1.3833333333333333,
+            "ocean_current_direction": 186.25
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.055,
+            "wind_score": 0.037,
+            "onshore_score": 0.222,
+            "rain_score": 0.872,
+            "current_score": 0.0,
+            "raw_risk": 0.193,
+            "visibility": 0.099,
+            "calibrated_score": 0.165,
+            "probability": 0.007
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "lat": 38.914,
+        "lon": 121.614,
+        "notes": "大连近岸"
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": 0.023,
+        "best_probability": 0.1,
+        "best_date": "2026-04-02",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 9.183333333333334,
+            "wind_speed_10m": 10.504166666666666,
+            "wind_direction_10m": 274.125,
+            "precipitation": 0.0,
+            "cloud_cover": 7.625,
+            "sea_surface_temperature": 7.25,
+            "ocean_current_velocity": 1.3041666666666667,
+            "ocean_current_direction": 178.83333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.125,
+            "onshore_score": 0.006,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.14,
+            "visibility": 0.538,
+            "calibrated_score": 0.259,
+            "probability": 0.023
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 9.391666666666667,
+            "wind_speed_10m": 6.85,
+            "wind_direction_10m": 230.08333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 3.9583333333333335,
+            "sea_surface_temperature": 7.4625,
+            "ocean_current_velocity": 1.375,
+            "ocean_current_direction": 143.5
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.791,
+            "onshore_score": 0.039,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.258,
+            "visibility": 0.709,
+            "calibrated_score": 0.393,
+            "probability": 0.1
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 11.558333333333334,
+            "wind_speed_10m": 17.075,
+            "wind_direction_10m": 210.25,
+            "precipitation": 14.399999999999999,
+            "cloud_cover": 89.875,
+            "sea_surface_temperature": 7.216666666666667,
+            "ocean_current_velocity": 1.3583333333333334,
+            "ocean_current_direction": 159.58333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.092,
+            "rain_score": 0.032,
+            "current_score": 0.0,
+            "raw_risk": 0.046,
+            "visibility": 0.059,
+            "calibrated_score": 0.05,
+            "probability": 0.002
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 6.670833333333333,
+            "wind_speed_10m": 20.8375,
+            "wind_direction_10m": 312.125,
+            "precipitation": 0.0,
+            "cloud_cover": 28.583333333333332,
+            "sea_surface_temperature": 6.7375,
+            "ocean_current_velocity": 1.4291666666666667,
+            "ocean_current_direction": 152.91666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.043,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.124,
+            "visibility": 0.414,
+            "calibrated_score": 0.211,
+            "probability": 0.013
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 10.15,
+            "wind_speed_10m": 14.966666666666667,
+            "wind_direction_10m": 242.83333333333334,
+            "precipitation": 0.0,
+            "cloud_cover": 10.458333333333334,
+            "sea_surface_temperature": 6.941666666666666,
+            "ocean_current_velocity": 1.4375,
+            "ocean_current_direction": 183.25
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.001,
+            "onshore_score": 0.021,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.121,
+            "visibility": 0.519,
+            "calibrated_score": 0.241,
+            "probability": 0.018
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 10.15,
+            "wind_speed_10m": 14.308333333333334,
+            "wind_direction_10m": 204.41666666666666,
+            "precipitation": 0.30000000000000004,
+            "cloud_cover": 82.0,
+            "sea_surface_temperature": 7.075,
+            "ocean_current_velocity": 1.3583333333333334,
+            "ocean_current_direction": 171.16666666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.003,
+            "onshore_score": 0.115,
+            "rain_score": 0.784,
+            "current_score": 0.0,
+            "raw_risk": 0.133,
+            "visibility": 0.104,
+            "calibrated_score": 0.124,
+            "probability": 0.005
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 6.508333333333334,
+            "wind_speed_10m": 23.104166666666668,
+            "wind_direction_10m": 315.125,
+            "precipitation": 0.0,
+            "cloud_cover": 6.583333333333333,
+            "sea_surface_temperature": 7.0375,
+            "ocean_current_velocity": 1.2833333333333334,
+            "ocean_current_direction": 157.375
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.049,
+            "rain_score": 0.8,
+            "current_score": 0.0,
+            "raw_risk": 0.125,
+            "visibility": 0.542,
+            "calibrated_score": 0.25,
+            "probability": 0.02
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    },
+    {
+      "location": {
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 25.501,
+        "lon": 119.796,
+        "notes": "平潭岛"
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": 0.008,
+        "best_probability": 0.471,
+        "best_date": "2026-04-05",
+        "best_level": "低",
+        "today_level": "低"
+      },
+      "daily": [
+        {
+          "date": "2026-04-01",
+          "features": {
+            "temperature_2m": 16.704166666666666,
+            "wind_speed_10m": 15.958333333333334,
+            "wind_direction_10m": 42.208333333333336,
+            "precipitation": 14.799999999999999,
+            "cloud_cover": 63.625,
+            "sea_surface_temperature": 17.3,
+            "ocean_current_velocity": 0.5166666666666667,
+            "ocean_current_direction": 220.04166666666666
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.368,
+            "rain_score": 0.011,
+            "current_score": 0.334,
+            "raw_risk": 0.149,
+            "visibility": 0.211,
+            "calibrated_score": 0.168,
+            "probability": 0.008
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-02",
+          "features": {
+            "temperature_2m": 16.645833333333332,
+            "wind_speed_10m": 20.27916666666667,
+            "wind_direction_10m": 19.916666666666668,
+            "precipitation": 6.8,
+            "cloud_cover": 88.16666666666667,
+            "sea_surface_temperature": 17.141666666666666,
+            "ocean_current_velocity": 0.5583333333333333,
+            "ocean_current_direction": 206.58333333333334
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.0,
+            "wind_score": 0.0,
+            "onshore_score": 0.191,
+            "rain_score": 0.437,
+            "current_score": 0.231,
+            "raw_risk": 0.16,
+            "visibility": 0.069,
+            "calibrated_score": 0.133,
+            "probability": 0.005
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-03",
+          "features": {
+            "temperature_2m": 17.7,
+            "wind_speed_10m": 12.775,
+            "wind_direction_10m": 121.79166666666667,
+            "precipitation": 12.500000000000002,
+            "cloud_cover": 99.5,
+            "sea_surface_temperature": 17.2,
+            "ocean_current_velocity": 0.725,
+            "ocean_current_direction": 119.41666666666667
+          },
+          "scores": {
+            "sst_score": 0.0,
+            "temp_score": 0.07,
+            "wind_score": 0.02,
+            "onshore_score": 0.999,
+            "rain_score": 0.265,
+            "current_score": 0.031,
+            "raw_risk": 0.248,
+            "visibility": 0.003,
+            "calibrated_score": 0.174,
+            "probability": 0.008
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-04",
+          "features": {
+            "temperature_2m": 19.6625,
+            "wind_speed_10m": 9.0625,
+            "wind_direction_10m": 103.95833333333333,
+            "precipitation": 1.9,
+            "cloud_cover": 95.41666666666667,
+            "sea_surface_temperature": 18.191666666666666,
+            "ocean_current_velocity": 0.4375,
+            "ocean_current_direction": 127.45833333333333
+          },
+          "scores": {
+            "sst_score": 0.086,
+            "temp_score": 0.266,
+            "wind_score": 0.359,
+            "onshore_score": 0.958,
+            "rain_score": 0.699,
+            "current_score": 0.581,
+            "raw_risk": 0.467,
+            "visibility": 0.044,
+            "calibrated_score": 0.34,
+            "probability": 0.056
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-05",
+          "features": {
+            "temperature_2m": 19.3125,
+            "wind_speed_10m": 4.508333333333334,
+            "wind_direction_10m": 60.25,
+            "precipitation": 0.30000000000000004,
+            "cloud_cover": 75.45833333333333,
+            "sea_surface_temperature": 18.470833333333335,
+            "ocean_current_velocity": 0.32083333333333336,
+            "ocean_current_direction": 154.875
+          },
+          "scores": {
+            "sst_score": 0.121,
+            "temp_score": 0.231,
+            "wind_score": 0.968,
+            "onshore_score": 0.554,
+            "rain_score": 0.904,
+            "current_score": 0.925,
+            "raw_risk": 0.579,
+            "visibility": 0.549,
+            "calibrated_score": 0.57,
+            "probability": 0.471
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-06",
+          "features": {
+            "temperature_2m": 20.225,
+            "wind_speed_10m": 14.541666666666668,
+            "wind_direction_10m": 171.5,
+            "precipitation": 20.399999999999995,
+            "cloud_cover": 100.0,
+            "sea_surface_temperature": 19.091666666666665,
+            "ocean_current_velocity": 0.8583333333333334,
+            "ocean_current_direction": 39.458333333333336
+          },
+          "scores": {
+            "sst_score": 0.199,
+            "temp_score": 0.323,
+            "wind_score": 0.003,
+            "onshore_score": 0.645,
+            "rain_score": 0.0,
+            "current_score": 0.003,
+            "raw_risk": 0.266,
+            "visibility": 0.0,
+            "calibrated_score": 0.186,
+            "probability": 0.01
+          },
+          "level": "低",
+          "observation": "一般"
+        },
+        {
+          "date": "2026-04-07",
+          "features": {
+            "temperature_2m": 20.983333333333334,
+            "wind_speed_10m": 17.770833333333332,
+            "wind_direction_10m": 157.20833333333334,
+            "precipitation": 4.8,
+            "cloud_cover": 99.125,
+            "sea_surface_temperature": 19.779166666666665,
+            "ocean_current_velocity": 0.7833333333333333,
+            "ocean_current_direction": 141.16666666666666
+          },
+          "scores": {
+            "sst_score": 0.285,
+            "temp_score": 0.398,
+            "wind_score": 0.0,
+            "onshore_score": 0.795,
+            "rain_score": 0.544,
+            "current_score": 0.012,
+            "raw_risk": 0.386,
+            "visibility": 0.005,
+            "calibrated_score": 0.272,
+            "probability": 0.026
+          },
+          "level": "低",
+          "observation": "一般"
+        }
+      ]
+    }
+  ]
+}
