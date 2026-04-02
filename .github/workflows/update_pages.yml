@@ -46,7 +46,7 @@ jobs:
             --days 15 \
             --output docs/data/latest.json \
             --history-dir docs/data/history \
-            --workers 6
+            --workers 1
 
       - name: Ensure Pages files exist
         run: |

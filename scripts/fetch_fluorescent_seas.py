@@ -21,6 +21,7 @@ import json
 import math
 import statistics
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -72,7 +73,7 @@ def score_to_probability(score: float, threshold: float, scale: float = 0.08) ->
     return 1.0 / (1.0 + math.exp(-z))
 
 
-def fetch_json(url: str, params: Dict[str, Any], retries: int = 2, timeout: int = 30) -> Dict[str, Any]:
+def fetch_json(url: str, params: Dict[str, Any], retries: int = 4, timeout: int = 30) -> Dict[str, Any]:
     query = urllib.parse.urlencode(params)
     full_url = f"{url}?{query}"
     req = urllib.request.Request(full_url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
@@ -82,6 +83,16 @@ def fetch_json(url: str, params: Dict[str, Any], retries: int = 2, timeout: int 
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 payload = resp.read().decode("utf-8")
             return json.loads(payload)
+        except urllib.error.HTTPError as exc:  # pragma: no cover - network fallback
+            last_exc = exc
+            if exc.code == 429:
+                retry_after = exc.headers.get("Retry-After") if exc.headers else None
+                sleep_s = float(retry_after) if retry_after and retry_after.isdigit() else (2.0 + attempt * 2.5)
+                time.sleep(sleep_s)
+            elif attempt < retries:
+                time.sleep(0.8 * (attempt + 1))
+            else:
+                raise last_exc
         except Exception as exc:  # pragma: no cover - network fallback
             last_exc = exc
             if attempt < retries:
@@ -461,7 +472,7 @@ def main() -> None:
     parser.add_argument("--locations", type=str, default=str(DEFAULT_LOCATIONS), help="地点JSON路径")
     parser.add_argument("--output", type=str, default=str(ROOT / "docs" / "data" / "latest.json"), help="输出JSON路径")
     parser.add_argument("--history-dir", type=str, default=str(ROOT / "docs" / "data" / "history"), help="历史快照目录")
-    parser.add_argument("--workers", type=int, default=6, help="并发数")
+    parser.add_argument("--workers", type=int, default=1, help="并发数")
     args = parser.parse_args()
 
     if args.days < 1 or args.days > 16:
@@ -502,8 +513,9 @@ def main() -> None:
                         "error": str(exc),
                     },
                     "daily": [],
-                }
-            )
+                    }
+                )
+            time.sleep(0.4)
 
     results.sort(key=lambda x: (x["summary"].get("today_probability") or -1), reverse=True)
 
