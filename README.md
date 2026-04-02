@@ -25,6 +25,16 @@ python scripts/fetch_fluorescent_seas.py --days 7 --output docs/data/latest.json
 python -m http.server -d docs 8000
 ```
 
+## 回测与拟合
+
+```bash
+python scripts/backtest_fluorescent_seas.py
+```
+
+输出：
+- `outputs/fluorescent_seas_backtest_20260402.csv`
+- `outputs/fluorescent_seas_backtest_20260402.md`
+
 ## 部署说明
 
 - GitHub Actions 工作流：`.github/workflows/update_pages.yml`

@@ -287,19 +287,22 @@ def build_location_forecast(
         wind_vis = 0.6 if wind is None else gaussian(wind, mu=4.0, sigma=2.0)
         visibility = clamp01(0.58 * cloud_vis + 0.42 * wind_vis)
 
+        # Backtest-tuned weather weighting (2026-04-02):
+        # short-term heating / sustained warmth dominates, with smaller
+        # contributions from onshore transport, wind, rain and currents.
         raw_risk = (
-            0.38 * heat_build_score
-            + 0.18 * shore_transport_score
-            + 0.15 * sst_score
-            + 0.12 * wind_score
-            + 0.09 * rain_score
-            + 0.08 * current_score
+            0.58 * heat_build_score
+            + 0.14 * shore_transport_score
+            + 0.10 * sst_score
+            + 0.08 * wind_score
+            + 0.06 * rain_score
+            + 0.04 * current_score
         )
         raw_risk = clamp01(raw_risk + preset["bias"])
         geo_prior_score = clamp01((geo_prior - 0.9) / 0.4)
         prior_boost = clamp01(0.5 * geo_prior_score + 0.5 * (geo_prior - 1.0 + 0.5))
 
-        calibrated_score = clamp01(0.63 * raw_risk + 0.22 * visibility + 0.15 * prior_boost)
+        calibrated_score = clamp01(0.58 * raw_risk + 0.18 * visibility + 0.24 * prior_boost)
         probability = clamp01(score_to_probability(calibrated_score, threshold=0.58, scale=0.085))
         level = classify_level(probability)
         if day < today.isoformat():

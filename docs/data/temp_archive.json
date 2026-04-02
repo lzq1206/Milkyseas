@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-04-01T23:13:49+08:00",
-    "generated_date": "2026-04-01",
+    "generated_at": "2026-04-02T12:30:40+08:00",
+    "generated_date": "2026-04-02",
     "keep_days": 30,
     "note": "Rolling 30-day temperature archive used for warming trend calibration."
   },
