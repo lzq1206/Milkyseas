@@ -32,6 +32,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LOCATIONS = ROOT / "data" / "locations.json"
 TEMP_ARCHIVE_PATH = ROOT / "docs" / "data" / "temp_archive.json"
+LATEST_GOOD_PATH = ROOT / "docs" / "data" / "latest_good.json"
 PAST_DAYS = 7
 FUTURE_DAYS = 7
 
@@ -221,6 +222,54 @@ def short_term_rise_score(temp_history: List[Optional[float]], window: int = 4, 
     return clamp01(rise / max(target_jump, 1e-6))
 
 
+def load_json_if_exists(path: Path) -> Optional[Dict[str, Any]]:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def snapshot_has_data(payload: Dict[str, Any]) -> bool:
+    locations = payload.get("locations", []) if isinstance(payload, dict) else []
+    return any((loc.get("summary", {}).get("today_probability") is not None) for loc in locations if isinstance(loc, dict))
+
+
+def merge_with_good_snapshot(payload: Dict[str, Any], good_payload: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    if not good_payload or not isinstance(good_payload, dict):
+        return payload
+    good_by_city = {loc.get("location", {}).get("city"): loc for loc in good_payload.get("locations", []) if isinstance(loc, dict)}
+    merged_locations = []
+    for loc in payload.get("locations", []):
+        if not isinstance(loc, dict):
+            continue
+        city = loc.get("location", {}).get("city")
+        summary = loc.get("summary", {}) if isinstance(loc.get("summary", {}), dict) else {}
+        needs_fallback = summary.get("today_probability") is None or not loc.get("daily")
+        if needs_fallback and city in good_by_city:
+            merged_locations.append(good_by_city[city])
+        else:
+            merged_locations.append(loc)
+    payload = dict(payload)
+    payload["locations"] = merged_locations
+    payload["ranking_today"] = [
+        {
+            "city": r.get("location", {}).get("city"),
+            "province": r.get("location", {}).get("province"),
+            "group": r.get("location", {}).get("group"),
+            "geo_prior": r.get("geo_prior"),
+            "today_probability": r.get("summary", {}).get("today_probability"),
+            "today_level": r.get("summary", {}).get("today_level"),
+            "best_probability": r.get("summary", {}).get("best_probability"),
+            "best_date": r.get("summary", {}).get("best_date"),
+            "best_level": r.get("summary", {}).get("best_level"),
+        }
+        for r in merged_locations
+    ]
+    return payload
+
+
 def build_location_forecast(
     location: Dict[str, Any],
     days: int = 15,
@@ -374,7 +423,7 @@ def build_location_forecast(
 
     return {
         "location": location,
-                "region_preset": preset,
+        "region_preset": preset,
         "geo_prior": round(geo_prior, 3),
         "geo_prior_score": round(geo_prior_score, 3),
         "prior_boost": round(prior_boost, 3),
@@ -480,6 +529,7 @@ def main() -> None:
 
     locations = load_locations(Path(args.locations))
     temp_archive = load_temp_archive(TEMP_ARCHIVE_PATH)
+    previous_good = load_json_if_exists(LATEST_GOOD_PATH)
     run_at = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     run_date = dt.date.today().isoformat()
 
@@ -515,7 +565,7 @@ def main() -> None:
                     "daily": [],
                     }
                 )
-            time.sleep(0.4)
+            time.sleep(1.0)
 
     results.sort(key=lambda x: (x["summary"].get("today_probability") or -1), reverse=True)
 
@@ -572,11 +622,17 @@ def main() -> None:
         "locations": results,
     }
 
+    payload = merge_with_good_snapshot(payload, previous_good)
+
     temp_archive = append_temp_archive(temp_archive, locations, results, run_date)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    if snapshot_has_data(payload):
+        LATEST_GOOD_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LATEST_GOOD_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     TEMP_ARCHIVE_PATH.parent.mkdir(parents=True, exist_ok=True)
     TEMP_ARCHIVE_PATH.write_text(

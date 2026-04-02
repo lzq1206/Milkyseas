@@ -1,4 +1,7 @@
-const latestUrl = `data/latest.json?v=${Date.now()}`;
+const latestUrls = [
+  `data/latest.json?v=${Date.now()}`,
+  `data/latest_good.json?v=20260402`,
+];
 
 let probabilityChart;
 let temperatureChart;
@@ -224,8 +227,23 @@ function selectCity(idx, locations) {
 }
 
 async function loadData() {
-  const response = await fetch(latestUrl, { cache: 'no-store' });
-  const data = await response.json();
+  let data = null;
+  let lastErr = null;
+  for (const url of latestUrls) {
+    try {
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const candidate = await response.json();
+      const locations = candidate.locations || [];
+      const hasData = locations.some((r) => r?.summary?.today_probability != null);
+      if (!hasData) throw new Error('no usable location data');
+      data = candidate;
+      break;
+    } catch (err) {
+      lastErr = err;
+    }
+  }
+  if (!data) throw lastErr || new Error('unable to load data');
   const locations = data.locations || [];
 
   document.getElementById('meta-generated').textContent = `更新于 ${data.meta.generated_at}`;
