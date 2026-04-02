@@ -1,4 +1,4 @@
-const latestUrl = 'data/latest.json';
+const latestUrl = `data/latest.json?v=${Date.now()}`;
 
 let probabilityChart;
 let temperatureChart;
