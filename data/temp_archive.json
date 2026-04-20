@@ -1,0 +1,3650 @@
+{
+  "meta": {
+    "generated_at": "2026-04-20T03:55:34+00:00",
+    "generated_date": "2026-04-20",
+    "keep_days": 30,
+    "note": "Rolling 30-day temperature archive used for warming trend calibration."
+  },
+  "cities": {
+    "大连市": [
+      {
+        "date": "2026-04-01",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.183,
+        "sea_surface_temperature": 7.25,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.717,
+        "sea_surface_temperature": 7.463,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.213,
+        "sea_surface_temperature": 7.333,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 6.287,
+        "sea_surface_temperature": 6.713,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.742,
+        "sea_surface_temperature": 7.0,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 8.113,
+        "sea_surface_temperature": 7.146,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 7.454,
+        "sea_surface_temperature": 7.263,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.45,
+        "sea_surface_temperature": 7.138,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 7.771,
+        "sea_surface_temperature": 6.875,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.817,
+        "sea_surface_temperature": 7.271,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.604,
+        "sea_surface_temperature": 7.521,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.179,
+        "sea_surface_temperature": 7.812,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.171,
+        "sea_surface_temperature": 7.862,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.592,
+        "sea_surface_temperature": 8.592,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.017,
+        "sea_surface_temperature": 9.346,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.304,
+        "sea_surface_temperature": 9.3,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.246,
+        "sea_surface_temperature": 9.762,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.929,
+        "sea_surface_temperature": 10.579,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 15.296,
+        "sea_surface_temperature": 10.821,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.129,
+        "sea_surface_temperature": 9.554,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "秦皇岛": [
+      {
+        "date": "2026-04-01",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.387,
+        "sea_surface_temperature": 6.433,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 9.154,
+        "sea_surface_temperature": 6.558,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.921,
+        "sea_surface_temperature": 6.879,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 8.037,
+        "sea_surface_temperature": 6.95,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.238,
+        "sea_surface_temperature": 7.058,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.033,
+        "sea_surface_temperature": 7.162,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 7.433,
+        "sea_surface_temperature": 7.296,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.7,
+        "sea_surface_temperature": 7.396,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 8.846,
+        "sea_surface_temperature": 7.571,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.796,
+        "sea_surface_temperature": 8.012,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.046,
+        "sea_surface_temperature": 8.371,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 15.542,
+        "sea_surface_temperature": 8.546,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.408,
+        "sea_surface_temperature": 8.496,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.933,
+        "sea_surface_temperature": 8.717,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.829,
+        "sea_surface_temperature": 9.25,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.971,
+        "sea_surface_temperature": 9.287,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 16.104,
+        "sea_surface_temperature": 9.792,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 15.542,
+        "sea_surface_temperature": 9.988,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.596,
+        "sea_surface_temperature": 10.129,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.596,
+        "sea_surface_temperature": 10.071,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "天津市": [
+      {
+        "date": "2026-04-01",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.025,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.562,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.029,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.758,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.688,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.088,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.537,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.487,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.662,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.017,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 15.146,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.762,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.062,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.817,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 16.904,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.475,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 18.304,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 21.358,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 19.938,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.954,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "东营市": [
+      {
+        "date": "2026-04-01",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.1,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.992,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 19.621,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.067,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 14.029,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 12.133,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 10.404,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.312,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 11.792,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 16.067,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 16.746,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 18.688,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 16.821,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.613,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 17.6,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 18.379,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 18.592,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 20.95,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 21.429,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "temperature_2m": 13.871,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "青岛市": [
+      {
+        "date": "2026-04-01",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.338,
+        "sea_surface_temperature": 10.096,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.667,
+        "sea_surface_temperature": 10.333,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.617,
+        "sea_surface_temperature": 10.312,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 10.854,
+        "sea_surface_temperature": 10.012,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.954,
+        "sea_surface_temperature": 10.362,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 13.05,
+        "sea_surface_temperature": 10.613,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 9.833,
+        "sea_surface_temperature": 10.504,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 10.237,
+        "sea_surface_temperature": 10.329,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.258,
+        "sea_surface_temperature": 10.138,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.821,
+        "sea_surface_temperature": 10.746,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 15.354,
+        "sea_surface_temperature": 10.879,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 13.512,
+        "sea_surface_temperature": 11.158,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.529,
+        "sea_surface_temperature": 11.417,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 15.404,
+        "sea_surface_temperature": 12.192,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 16.396,
+        "sea_surface_temperature": 12.537,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.825,
+        "sea_surface_temperature": 12.45,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.854,
+        "sea_surface_temperature": 12.887,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.887,
+        "sea_surface_temperature": 13.633,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.296,
+        "sea_surface_temperature": 13.854,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.225,
+        "sea_surface_temperature": 12.783,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "威海市": [
+      {
+        "date": "2026-04-01",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 9.067,
+        "sea_surface_temperature": 7.821,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.283,
+        "sea_surface_temperature": 8.113,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.058,
+        "sea_surface_temperature": 8.267,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 6.787,
+        "sea_surface_temperature": 8.0,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.5,
+        "sea_surface_temperature": 8.033,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 8.854,
+        "sea_surface_temperature": 8.133,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 8.158,
+        "sea_surface_temperature": 8.354,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 10.963,
+        "sea_surface_temperature": 8.367,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 9.35,
+        "sea_surface_temperature": 8.15,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 10.529,
+        "sea_surface_temperature": 8.529,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.529,
+        "sea_surface_temperature": 8.512,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.542,
+        "sea_surface_temperature": 9.112,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.85,
+        "sea_surface_temperature": 9.321,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.975,
+        "sea_surface_temperature": 9.967,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 12.075,
+        "sea_surface_temperature": 10.671,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 14.833,
+        "sea_surface_temperature": 10.883,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 13.842,
+        "sea_surface_temperature": 11.258,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 15.213,
+        "sea_surface_temperature": 11.496,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 16.7,
+        "sea_surface_temperature": 11.671,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "temperature_2m": 11.408,
+        "sea_surface_temperature": 10.975,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "舟山市": [
+      {
+        "date": "2026-04-01",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 13.896,
+        "sea_surface_temperature": 14.379,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.471,
+        "sea_surface_temperature": 14.525,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.6,
+        "sea_surface_temperature": 14.333,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.421,
+        "sea_surface_temperature": 14.312,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.317,
+        "sea_surface_temperature": 14.55,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.421,
+        "sea_surface_temperature": 15.1,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.196,
+        "sea_surface_temperature": 14.671,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 13.8,
+        "sea_surface_temperature": 14.779,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.121,
+        "sea_surface_temperature": 14.758,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.158,
+        "sea_surface_temperature": 15.667,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.821,
+        "sea_surface_temperature": 15.733,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.529,
+        "sea_surface_temperature": 15.683,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.846,
+        "sea_surface_temperature": 16.062,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.654,
+        "sea_surface_temperature": 16.754,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.825,
+        "sea_surface_temperature": 16.892,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.375,
+        "sea_surface_temperature": 17.275,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.492,
+        "sea_surface_temperature": 17.375,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.196,
+        "sea_surface_temperature": 17.754,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.175,
+        "sea_surface_temperature": 17.883,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.288,
+        "sea_surface_temperature": 18.383,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "台州市": [
+      {
+        "date": "2026-04-01",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.604,
+        "sea_surface_temperature": 15.55,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.529,
+        "sea_surface_temperature": 15.767,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.529,
+        "sea_surface_temperature": 15.821,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.408,
+        "sea_surface_temperature": 16.363,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.438,
+        "sea_surface_temperature": 16.863,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.962,
+        "sea_surface_temperature": 17.2,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.546,
+        "sea_surface_temperature": 16.988,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.046,
+        "sea_surface_temperature": 16.721,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 21.704,
+        "sea_surface_temperature": 17.067,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.721,
+        "sea_surface_temperature": 18.083,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.533,
+        "sea_surface_temperature": 17.979,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.458,
+        "sea_surface_temperature": 17.992,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.392,
+        "sea_surface_temperature": 18.092,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.375,
+        "sea_surface_temperature": 18.567,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.258,
+        "sea_surface_temperature": 18.446,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.096,
+        "sea_surface_temperature": 18.325,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.108,
+        "sea_surface_temperature": 18.792,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.442,
+        "sea_surface_temperature": 18.858,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.421,
+        "sea_surface_temperature": 19.054,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.4,
+        "sea_surface_temperature": 19.558,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "温州市": [
+      {
+        "date": "2026-04-01",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.446,
+        "sea_surface_temperature": 15.775,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.396,
+        "sea_surface_temperature": 16.029,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.533,
+        "sea_surface_temperature": 16.142,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.896,
+        "sea_surface_temperature": 16.762,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.833,
+        "sea_surface_temperature": 17.304,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.988,
+        "sea_surface_temperature": 17.913,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.783,
+        "sea_surface_temperature": 17.387,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.867,
+        "sea_surface_temperature": 16.538,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.596,
+        "sea_surface_temperature": 16.692,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 22.637,
+        "sea_surface_temperature": 17.804,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.842,
+        "sea_surface_temperature": 17.971,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.346,
+        "sea_surface_temperature": 18.262,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.8,
+        "sea_surface_temperature": 18.462,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.254,
+        "sea_surface_temperature": 19.183,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.608,
+        "sea_surface_temperature": 19.071,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.45,
+        "sea_surface_temperature": 18.863,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.304,
+        "sea_surface_temperature": 19.692,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.292,
+        "sea_surface_temperature": 19.742,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.358,
+        "sea_surface_temperature": 19.521,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 21.75,
+        "sea_surface_temperature": 20.067,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "宁波市": [
+      {
+        "date": "2026-04-01",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.988,
+        "sea_surface_temperature": 14.829,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.337,
+        "sea_surface_temperature": 15.125,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.912,
+        "sea_surface_temperature": 15.2,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.275,
+        "sea_surface_temperature": 15.567,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 19.567,
+        "sea_surface_temperature": 16.258,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 21.342,
+        "sea_surface_temperature": 16.333,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.083,
+        "sea_surface_temperature": 16.212,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 14.637,
+        "sea_surface_temperature": 15.95,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 25.804,
+        "sea_surface_temperature": 16.729,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 20.446,
+        "sea_surface_temperature": 18.254,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 16.062,
+        "sea_surface_temperature": 17.579,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 15.304,
+        "sea_surface_temperature": 17.275,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.108,
+        "sea_surface_temperature": 17.213,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.192,
+        "sea_surface_temperature": 17.604,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.579,
+        "sea_surface_temperature": 17.887,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.142,
+        "sea_surface_temperature": 18.0,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.879,
+        "sea_surface_temperature": 18.354,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 17.35,
+        "sea_surface_temperature": 18.9,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.3,
+        "sea_surface_temperature": 18.854,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "temperature_2m": 18.629,
+        "sea_surface_temperature": 19.358,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "平潭县": [
+      {
+        "date": "2026-04-01",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 16.704,
+        "sea_surface_temperature": 17.3,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 16.771,
+        "sea_surface_temperature": 17.142,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 17.721,
+        "sea_surface_temperature": 17.196,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.146,
+        "sea_surface_temperature": 18.258,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.021,
+        "sea_surface_temperature": 18.312,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.283,
+        "sea_surface_temperature": 18.971,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 18.104,
+        "sea_surface_temperature": 18.975,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 16.812,
+        "sea_surface_temperature": 17.533,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.567,
+        "sea_surface_temperature": 18.208,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.35,
+        "sea_surface_temperature": 19.508,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.775,
+        "sea_surface_temperature": 20.371,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.1,
+        "sea_surface_temperature": 20.879,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.95,
+        "sea_surface_temperature": 21.392,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.258,
+        "sea_surface_temperature": 21.971,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.392,
+        "sea_surface_temperature": 22.1,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.163,
+        "sea_surface_temperature": 21.3,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.837,
+        "sea_surface_temperature": 21.804,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.304,
+        "sea_surface_temperature": 21.212,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.233,
+        "sea_surface_temperature": 20.921,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.625,
+        "sea_surface_temperature": 21.6,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "宁德市": [
+      {
+        "date": "2026-04-01",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 16.521,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 14.338,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 15.954,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 18.262,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 17.908,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 19.467,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 16.113,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 14.079,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 22.346,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 24.775,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 19.975,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 21.921,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 21.208,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 22.729,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 19.008,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 17.921,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 19.575,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 17.038,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 20.204,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "temperature_2m": 21.433,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "厦门市": [
+      {
+        "date": "2026-04-01",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.308,
+        "sea_surface_temperature": 20.3,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.738,
+        "sea_surface_temperature": 20.275,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.554,
+        "sea_surface_temperature": 20.071,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.396,
+        "sea_surface_temperature": 20.608,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.267,
+        "sea_surface_temperature": 20.625,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.708,
+        "sea_surface_temperature": 20.771,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.567,
+        "sea_surface_temperature": 20.879,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 19.529,
+        "sea_surface_temperature": 20.654,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.238,
+        "sea_surface_temperature": 20.867,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 25.113,
+        "sea_surface_temperature": 21.142,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.988,
+        "sea_surface_temperature": 21.729,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 25.812,
+        "sea_surface_temperature": 22.125,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 25.438,
+        "sea_surface_temperature": 22.538,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 26.254,
+        "sea_surface_temperature": 23.092,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.429,
+        "sea_surface_temperature": 23.708,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.671,
+        "sea_surface_temperature": 23.875,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.908,
+        "sea_surface_temperature": 24.2,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.425,
+        "sea_surface_temperature": 24.083,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.454,
+        "sea_surface_temperature": 24.492,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.688,
+        "sea_surface_temperature": 24.808,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "泉州市": [
+      {
+        "date": "2026-04-01",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.471,
+        "sea_surface_temperature": 19.254,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 18.887,
+        "sea_surface_temperature": 19.354,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 18.746,
+        "sea_surface_temperature": 19.392,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.458,
+        "sea_surface_temperature": 19.837,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.579,
+        "sea_surface_temperature": 19.892,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.137,
+        "sea_surface_temperature": 20.154,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 20.521,
+        "sea_surface_temperature": 20.146,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 18.767,
+        "sea_surface_temperature": 20.071,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.633,
+        "sea_surface_temperature": 20.292,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.342,
+        "sea_surface_temperature": 20.617,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.262,
+        "sea_surface_temperature": 21.021,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.817,
+        "sea_surface_temperature": 21.312,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.938,
+        "sea_surface_temperature": 21.675,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 25.688,
+        "sea_surface_temperature": 22.012,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 23.35,
+        "sea_surface_temperature": 22.508,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.917,
+        "sea_surface_temperature": 22.742,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.738,
+        "sea_surface_temperature": 23.133,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 21.917,
+        "sea_surface_temperature": 23.125,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 22.892,
+        "sea_surface_temperature": 23.312,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "temperature_2m": 24.208,
+        "sea_surface_temperature": 23.742,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "深圳市": [
+      {
+        "date": "2026-04-01",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.958,
+        "sea_surface_temperature": 25.9,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.238,
+        "sea_surface_temperature": 25.962,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.954,
+        "sea_surface_temperature": 26.271,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.146,
+        "sea_surface_temperature": 26.225,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.458,
+        "sea_surface_temperature": 26.167,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.604,
+        "sea_surface_temperature": 26.387,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.183,
+        "sea_surface_temperature": 26.767,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.717,
+        "sea_surface_temperature": 26.954,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.529,
+        "sea_surface_temperature": 26.892,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.104,
+        "sea_surface_temperature": 26.746,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.196,
+        "sea_surface_temperature": 26.913,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.733,
+        "sea_surface_temperature": 27.108,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.454,
+        "sea_surface_temperature": 27.3,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.783,
+        "sea_surface_temperature": 27.508,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.746,
+        "sea_surface_temperature": 27.688,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.383,
+        "sea_surface_temperature": 27.829,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.396,
+        "sea_surface_temperature": 27.758,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.167,
+        "sea_surface_temperature": 28.025,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.175,
+        "sea_surface_temperature": 28.117,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.221,
+        "sea_surface_temperature": 28.054,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "珠海市": [
+      {
+        "date": "2026-04-01",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.038,
+        "sea_surface_temperature": 25.688,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.504,
+        "sea_surface_temperature": 25.717,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.621,
+        "sea_surface_temperature": 26.308,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.7,
+        "sea_surface_temperature": 26.4,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.3,
+        "sea_surface_temperature": 26.246,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.279,
+        "sea_surface_temperature": 26.458,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.75,
+        "sea_surface_temperature": 26.879,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.325,
+        "sea_surface_temperature": 27.079,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.858,
+        "sea_surface_temperature": 27.096,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.417,
+        "sea_surface_temperature": 26.929,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.446,
+        "sea_surface_temperature": 27.113,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.613,
+        "sea_surface_temperature": 27.325,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.663,
+        "sea_surface_temperature": 27.517,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.95,
+        "sea_surface_temperature": 27.762,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.767,
+        "sea_surface_temperature": 27.967,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.387,
+        "sea_surface_temperature": 28.092,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.667,
+        "sea_surface_temperature": 28.096,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.383,
+        "sea_surface_temperature": 28.296,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.958,
+        "sea_surface_temperature": 28.338,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.867,
+        "sea_surface_temperature": 28.342,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "惠州市": [
+      {
+        "date": "2026-04-01",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 22.604,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 22.642,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.233,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.846,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.2,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.167,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.033,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.533,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.333,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.533,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.779,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 27.079,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.942,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 27.321,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.954,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.333,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.158,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.896,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.608,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.858,
+        "sea_surface_temperature": null,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "汕头市": [
+      {
+        "date": "2026-04-01",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.692,
+        "sea_surface_temperature": 22.446,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 20.7,
+        "sea_surface_temperature": 22.421,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.017,
+        "sea_surface_temperature": 22.688,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.938,
+        "sea_surface_temperature": 22.825,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 22.542,
+        "sea_surface_temperature": 22.804,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.837,
+        "sea_surface_temperature": 23.171,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 24.55,
+        "sea_surface_temperature": 23.413,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 20.542,
+        "sea_surface_temperature": 23.308,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 23.863,
+        "sea_surface_temperature": 23.6,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.958,
+        "sea_surface_temperature": 23.875,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.742,
+        "sea_surface_temperature": 24.137,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.446,
+        "sea_surface_temperature": 24.371,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.404,
+        "sea_surface_temperature": 24.683,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.704,
+        "sea_surface_temperature": 24.958,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.771,
+        "sea_surface_temperature": 25.083,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.354,
+        "sea_surface_temperature": 25.317,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.192,
+        "sea_surface_temperature": 25.304,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 26.083,
+        "sea_surface_temperature": 25.462,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.096,
+        "sea_surface_temperature": 25.496,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "temperature_2m": 25.871,
+        "sea_surface_temperature": 25.554,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "陵水县": [
+      {
+        "date": "2026-04-01",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 25.817,
+        "sea_surface_temperature": 26.879,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.154,
+        "sea_surface_temperature": 26.9,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 25.996,
+        "sea_surface_temperature": 27.062,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.467,
+        "sea_surface_temperature": 27.158,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.017,
+        "sea_surface_temperature": 27.279,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.413,
+        "sea_surface_temperature": 27.337,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.508,
+        "sea_surface_temperature": 27.425,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.2,
+        "sea_surface_temperature": 27.6,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.879,
+        "sea_surface_temperature": 27.696,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.621,
+        "sea_surface_temperature": 27.692,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.917,
+        "sea_surface_temperature": 27.721,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.254,
+        "sea_surface_temperature": 27.788,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.392,
+        "sea_surface_temperature": 27.875,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.867,
+        "sea_surface_temperature": 27.971,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.433,
+        "sea_surface_temperature": 27.988,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.7,
+        "sea_surface_temperature": 27.929,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.808,
+        "sea_surface_temperature": 28.079,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.454,
+        "sea_surface_temperature": 28.079,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.121,
+        "sea_surface_temperature": 28.033,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 26.012,
+        "sea_surface_temperature": 27.962,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ],
+    "三亚市": [
+      {
+        "date": "2026-04-01",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.688,
+        "sea_surface_temperature": 26.754,
+        "generated_at": "2026-04-01T23:14:01+08:00"
+      },
+      {
+        "date": "2026-04-02",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.613,
+        "sea_surface_temperature": 26.829,
+        "generated_at": "2026-04-02T07:22:41+00:00"
+      },
+      {
+        "date": "2026-04-03",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.433,
+        "sea_surface_temperature": 27.087,
+        "generated_at": "2026-04-03T03:33:21+00:00"
+      },
+      {
+        "date": "2026-04-04",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.154,
+        "sea_surface_temperature": 27.317,
+        "generated_at": "2026-04-04T03:21:58+00:00"
+      },
+      {
+        "date": "2026-04-05",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.246,
+        "sea_surface_temperature": 27.496,
+        "generated_at": "2026-04-05T03:42:45+00:00"
+      },
+      {
+        "date": "2026-04-06",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.662,
+        "sea_surface_temperature": 27.712,
+        "generated_at": "2026-04-06T03:46:17+00:00"
+      },
+      {
+        "date": "2026-04-07",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.779,
+        "sea_surface_temperature": 27.846,
+        "generated_at": "2026-04-07T03:37:35+00:00"
+      },
+      {
+        "date": "2026-04-08",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.454,
+        "sea_surface_temperature": 27.929,
+        "generated_at": "2026-04-08T03:39:14+00:00"
+      },
+      {
+        "date": "2026-04-09",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.108,
+        "sea_surface_temperature": 27.975,
+        "generated_at": "2026-04-09T03:34:38+00:00"
+      },
+      {
+        "date": "2026-04-10",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.337,
+        "sea_surface_temperature": 28.075,
+        "generated_at": "2026-04-10T03:47:13+00:00"
+      },
+      {
+        "date": "2026-04-11",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.354,
+        "sea_surface_temperature": 28.104,
+        "generated_at": "2026-04-11T03:25:35+00:00"
+      },
+      {
+        "date": "2026-04-12",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.567,
+        "sea_surface_temperature": 28.225,
+        "generated_at": "2026-04-12T03:50:54+00:00"
+      },
+      {
+        "date": "2026-04-13",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.438,
+        "sea_surface_temperature": 28.212,
+        "generated_at": "2026-04-13T03:58:20+00:00"
+      },
+      {
+        "date": "2026-04-14",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.212,
+        "sea_surface_temperature": 28.271,
+        "generated_at": "2026-04-14T03:48:48+00:00"
+      },
+      {
+        "date": "2026-04-15",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.108,
+        "sea_surface_temperature": 28.238,
+        "generated_at": "2026-04-15T03:46:47+00:00"
+      },
+      {
+        "date": "2026-04-16",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.587,
+        "sea_surface_temperature": 28.208,
+        "generated_at": "2026-04-16T03:52:26+00:00"
+      },
+      {
+        "date": "2026-04-17",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.271,
+        "sea_surface_temperature": 28.275,
+        "generated_at": "2026-04-17T03:50:26+00:00"
+      },
+      {
+        "date": "2026-04-18",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.721,
+        "sea_surface_temperature": 28.225,
+        "generated_at": "2026-04-18T03:36:14+00:00"
+      },
+      {
+        "date": "2026-04-19",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 27.762,
+        "sea_surface_temperature": 28.062,
+        "generated_at": "2026-04-19T03:54:27+00:00"
+      },
+      {
+        "date": "2026-04-20",
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "temperature_2m": 28.204,
+        "sea_surface_temperature": 28.033,
+        "generated_at": "2026-04-20T03:58:10+00:00"
+      }
+    ]
+  }
+}

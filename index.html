@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milkyseas V2 · 多地点荧光海高概率预测</title>
+  <meta name="description" content="Milkyseas V2：大连、秦皇岛、天津、东营、青岛、威海、舟山、台州、温州、宁波、平潭、宁德、厦门、泉州、深圳、珠海、惠州、汕头、陵水、三亚的日度荧光海高概率预测与可视化。" />
+  <link rel="stylesheet" href="styles.css?v=20260402" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Milkyseas V2 · GitHub Pages Dashboard</p>
+      <h1>多地点荧光海高概率预测</h1>
+      <p class="lead">每日自动抓取公开气象与海洋预报，输出 20 个中国沿海/近海城市前后 7 天的荧光海高概率、最佳观测日与趋势图。</p>
+      <div class="hero__meta">
+        <span id="meta-generated">加载中…</span>
+        <span id="meta-model"></span>
+        <span id="meta-source"></span>
+      </div>
+    </div>
+    <div class="hero__summary">
+      <div class="summary-card accent">
+        <span class="summary-card__label">今日最高概率</span>
+        <strong id="today-top-city">—</strong>
+        <span id="today-top-score">—</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">今日最值得观察</span>
+        <strong id="today-top-observe">—</strong>
+        <span id="today-top-observe-score">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" id="stats-grid">
+      <div class="stat-card"><span>城市数</span><strong id="stat-count">20</strong></div>
+      <div class="stat-card"><span>今日高概率</span><strong id="stat-high">—</strong></div>
+      <div class="stat-card"><span>今日中概率</span><strong id="stat-medium">—</strong></div>
+      <div class="stat-card"><span>当前数据日期</span><strong id="stat-date">—</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>地图总览</h2>
+          <p>底图展示所有城市的位置，热区颜色按今日概率高低变化，点击即可切换详情。</p>
+        </div>
+        <div class="panel__actions">
+          <label for="city-select">查看单城详情</label>
+          <select id="city-select"></select>
+        </div>
+      </div>
+      <div id="map" class="map-wrap"></div>
+      <div class="map-legend">
+        <span><i class="legend-dot low"></i>低概率</span>
+        <span><i class="legend-dot medium"></i>中概率</span>
+        <span><i class="legend-dot high"></i>高概率</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2 id="selected-title">单城详情</h2>
+          <p id="selected-caption">选择城市后查看前后 7 天的概率、温度与风向变化。</p>
+        </div>
+      </div>
+      <div class="detail-grid">
+        <article class="detail-summary" id="detail-summary"></article>
+        <div class="detail-charts">
+          <div class="chart-block">
+            <div class="chart-title">概率曲线</div>
+            <div class="chart-wrap chart-wrap--small"><canvas id="probability-chart"></canvas></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-title">温度曲线</div>
+            <div class="chart-wrap chart-wrap--small"><canvas id="temperature-chart"></canvas></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-title">海温曲线</div>
+            <div class="chart-wrap chart-wrap--small"><canvas id="sea-temperature-chart"></canvas></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-title">风向变化曲线（角度°）</div>
+            <div class="chart-wrap chart-wrap--small"><canvas id="wind-chart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>城市列表</h2>
+          <p>点击任意卡片可同步切换地图高亮与右侧城市详情。</p>
+        </div>
+      </div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <div>
+          <h2>每日汇总</h2>
+          <p>结构化表格适合导出与后续校准分析。</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>城市</th>
+              <th>地区</th>
+              <th>今日概率</th>
+              <th>今日等级</th>
+              <th>最佳日期</th>
+              <th>最佳概率</th>
+              <th>最佳等级</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>数据来源：Open-Meteo 公开天气/海洋预报。此页为启发式可校准模板，不构成出行建议或保证。</p>
+  </footer>
+
+  <script src="app.js?v=20260402"></script>
+</body>
+</html>
