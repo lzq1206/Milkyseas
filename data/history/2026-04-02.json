@@ -1,0 +1,780 @@
+{
+  "meta": {
+    "model": "milkyseas_v2_calibrated_template",
+    "version": "v2.0.0",
+    "generated_at": "2026-04-02T12:30:40+08:00",
+    "generated_date": "2026-04-02",
+    "days": 15,
+    "source": {
+      "weather": "Open-Meteo forecast API",
+      "marine": "Open-Meteo marine API"
+    },
+    "note": "启发式可校准模板；后续可接入历史荧光海标签做参数再训练。"
+  },
+  "ranking_today": [
+    {
+      "city": "威海市",
+      "province": "山东",
+      "group": "黄海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "东营市",
+      "province": "山东",
+      "group": "渤海/黄海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "天津市",
+      "province": "天津",
+      "group": "渤海/黄海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "青岛市",
+      "province": "山东",
+      "group": "黄海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "大连市",
+      "province": "辽宁",
+      "group": "渤海/黄海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "秦皇岛",
+      "province": "河北",
+      "group": "渤海/黄海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "舟山市",
+      "province": "浙江",
+      "group": "东海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "宁波市",
+      "province": "浙江",
+      "group": "东海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "台州市",
+      "province": "浙江",
+      "group": "东海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "宁德市",
+      "province": "福建",
+      "group": "东海/台湾海峡",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "平潭县",
+      "province": "福建",
+      "group": "台湾海峡",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "温州市",
+      "province": "浙江",
+      "group": "东海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "厦门市",
+      "province": "福建",
+      "group": "台湾海峡",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "珠海市",
+      "province": "广东",
+      "group": "南海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "深圳市",
+      "province": "广东",
+      "group": "南海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "泉州市",
+      "province": "福建",
+      "group": "台湾海峡",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "惠州市",
+      "province": "广东",
+      "group": "南海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "汕头市",
+      "province": "广东",
+      "group": "南海北部",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "陵水县",
+      "province": "海南",
+      "group": "南海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    },
+    {
+      "city": "三亚市",
+      "province": "海南",
+      "group": "南海",
+      "geo_prior": null,
+      "today_probability": null,
+      "today_level": "低概率",
+      "best_probability": null,
+      "best_date": null,
+      "best_level": "低概率"
+    }
+  ],
+  "top_today": [],
+  "top_best": [],
+  "locations": [
+    {
+      "location": {
+        "city": "威海市",
+        "province": "山东",
+        "group": "黄海",
+        "lat": 37.513,
+        "lon": 122.12,
+        "notes": "威海近岸",
+        "geo_prior": 1.08
+      },
+      "region_preset": {
+        "temp_peak": 25.0,
+        "sst_peak": 23.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 100.0,
+        "bias": 0.04
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "东营市",
+        "province": "山东",
+        "group": "渤海/黄海北部",
+        "lat": 37.434,
+        "lon": 118.674,
+        "notes": "黄河三角洲近岸",
+        "geo_prior": 1.12
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "天津市",
+        "province": "天津",
+        "group": "渤海/黄海北部",
+        "lat": 39.085,
+        "lon": 117.2,
+        "notes": "天津近海",
+        "geo_prior": 1.09
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "青岛市",
+        "province": "山东",
+        "group": "黄海",
+        "lat": 36.067,
+        "lon": 120.382,
+        "notes": "青岛近岸",
+        "geo_prior": 1.1
+      },
+      "region_preset": {
+        "temp_peak": 25.0,
+        "sst_peak": 23.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 100.0,
+        "bias": 0.04
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "大连市",
+        "province": "辽宁",
+        "group": "渤海/黄海北部",
+        "lat": 38.914,
+        "lon": 121.614,
+        "notes": "大连近岸",
+        "geo_prior": 1.08
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "秦皇岛",
+        "province": "河北",
+        "group": "渤海/黄海北部",
+        "lat": 39.935,
+        "lon": 119.6,
+        "notes": "北戴河近岸",
+        "geo_prior": 1.06
+      },
+      "region_preset": {
+        "temp_peak": 24.0,
+        "sst_peak": 22.5,
+        "wind_peak": 5.0,
+        "onshore_dir": 90.0,
+        "bias": 0.03
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "舟山市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 29.985,
+        "lon": 122.207,
+        "notes": "舟山群岛",
+        "geo_prior": 1.16
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "宁波市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 29.868,
+        "lon": 121.549,
+        "notes": "宁波沿海",
+        "geo_prior": 1.12
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "台州市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 28.656,
+        "lon": 121.42,
+        "notes": "台州沿海",
+        "geo_prior": 1.12
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "宁德市",
+        "province": "福建",
+        "group": "东海/台湾海峡",
+        "lat": 26.664,
+        "lon": 119.547,
+        "notes": "闽东沿海",
+        "geo_prior": 1.15
+      },
+      "region_preset": {
+        "temp_peak": 26.5,
+        "sst_peak": 25.0,
+        "wind_peak": 5.2,
+        "onshore_dir": 115.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "平潭县",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 25.501,
+        "lon": 119.796,
+        "notes": "平潭岛",
+        "geo_prior": 1.18
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "温州市",
+        "province": "浙江",
+        "group": "东海",
+        "lat": 27.994,
+        "lon": 120.699,
+        "notes": "温州沿海",
+        "geo_prior": 1.1
+      },
+      "region_preset": {
+        "temp_peak": 26.0,
+        "sst_peak": 24.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 110.0,
+        "bias": 0.05
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "厦门市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 24.479,
+        "lon": 118.089,
+        "notes": "厦门近岸",
+        "geo_prior": 1.2
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "珠海市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 22.27,
+        "lon": 113.576,
+        "notes": "珠海近岸",
+        "geo_prior": 1.24
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "深圳市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 22.543,
+        "lon": 114.058,
+        "notes": "深圳近岸",
+        "geo_prior": 1.22
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "泉州市",
+        "province": "福建",
+        "group": "台湾海峡",
+        "lat": 24.873,
+        "lon": 118.675,
+        "notes": "泉州沿海",
+        "geo_prior": 1.17
+      },
+      "region_preset": {
+        "temp_peak": 27.0,
+        "sst_peak": 25.5,
+        "wind_peak": 5.2,
+        "onshore_dir": 120.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "惠州市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 23.111,
+        "lon": 114.415,
+        "notes": "惠州近岸",
+        "geo_prior": 1.22
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "汕头市",
+        "province": "广东",
+        "group": "南海北部",
+        "lat": 23.354,
+        "lon": 116.681,
+        "notes": "汕头近岸",
+        "geo_prior": 1.19
+      },
+      "region_preset": {
+        "temp_peak": 28.0,
+        "sst_peak": 26.0,
+        "wind_peak": 4.8,
+        "onshore_dir": 125.0,
+        "bias": 0.06
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "陵水县",
+        "province": "海南",
+        "group": "南海",
+        "lat": 18.506,
+        "lon": 110.036,
+        "notes": "陵水近岸",
+        "geo_prior": 1.16
+      },
+      "region_preset": {
+        "temp_peak": 28.5,
+        "sst_peak": 26.5,
+        "wind_peak": 4.8,
+        "onshore_dir": 130.0,
+        "bias": 0.07
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    },
+    {
+      "location": {
+        "city": "三亚市",
+        "province": "海南",
+        "group": "南海",
+        "lat": 18.252,
+        "lon": 109.511,
+        "notes": "三亚近岸",
+        "geo_prior": 1.14
+      },
+      "region_preset": {
+        "temp_peak": 28.5,
+        "sst_peak": 26.5,
+        "wind_peak": 4.8,
+        "onshore_dir": 130.0,
+        "bias": 0.07
+      },
+      "summary": {
+        "today_probability": null,
+        "best_probability": null,
+        "best_date": null,
+        "best_level": "低概率",
+        "today_level": "低概率",
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "daily": []
+    }
+  ]
+}
